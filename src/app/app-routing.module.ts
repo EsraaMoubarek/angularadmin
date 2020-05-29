@@ -35,8 +35,8 @@ const routes: Routes = [
 },
 { 
   path: '',
-  component: HomeComponent/*HomeloginComponent*/,
-  //pathMatch:"full",
+  component: HomeloginComponent,
+  pathMatch:"full",
 },
 
 ];
