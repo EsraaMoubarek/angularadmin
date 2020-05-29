@@ -1,0 +1,152 @@
+<!-- <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head> -->
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- //// -->
+<div class="container">
+
+  <mat-card>
+    <mat-toolbar color="Green">
+      <div align="center" style="color:rgb(47, 158, 37);" class="text-center h2">
+        Schedule
+      </div>
+    </mat-toolbar>
+    <mat-card-content>
+      <form [formGroup]="scheduleForm">
+        <table class="table table-bordered text-center">
+          <tr ngclass="btn-primary">
+            <th scope="col">Id</th>
+            <!-- <th class="tbl2">Date</th>   -->
+            <th scope="col">Date and Time</th>
+            <th scope="col">Driver Name</th>
+            <th scope="col">Region</th>
+
+          </tr>
+          <tr *ngFor="let schedule of allSchedules ">
+            <td scope="row">{{schedule.id}}</td>
+            <!-- <td class="tbl2">{{schedule.date | date }}</td>   -->
+            <td class="tb">{{schedule.time }}</td>
+            <td class="tb">{{schedule.driver.userName}}</td>
+            <td class="tb">{{schedule.region.name}}</td>
+            <td class="tb"><button class="btn-danger " style="width:80px;height:40px;" (click)="del(schedule.id)" href="#">Delete</button></td>
+          </tr>
+        </table>
+      </form>
+      <hr>
+      <!-- /// -->
+      <h3 style="color:rgb(47, 158, 37);">Add a new One </h3>
+
+      <div class="container">
+        <div class="row">
+          <label>Select Date andTime</label>
+          <div class='col-sm-6'>
+            <input type='datetime-local' class="form-control" [(ngModel)]="newsch.Time" />
+          </div>
+
+        </div>
+        <br>
+        <!-- /// -->
+        <div class="row">
+          <label>Select Driver</label>
+          <div class='col-sm-6'>
+            <select [(ngModel)]="newsch.DriverId" class="form-control">
+
+              <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> -->
+              <option [value]="item.id" *ngFor="let item of drivers">{{item.userName}}</option>
+            </select>
+
+          </div>
+        </div>
+        <!-- /// -->
+        <br>
+        <!-- /// -->
+        <div class="row">
+          <label>Select Region</label>
+          <div class='col-sm-6'>
+            <select [(ngModel)]="newsch.RegionId" class="form-control">
+
+              <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> -->
+              <option [value]="item.id" *ngFor="let item of regions">{{item.name}}</option>
+            </select>
+
+          </div>
+        </div>
+
+        <hr>
+        <!-- /// col1 -->
+        <div class="row">
+          <label>Select Collector 1</label>
+          <div class='col-sm-6'>
+            <select [(ngModel)]="newcol1.CollectorId" class="form-control">
+
+              <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> -->
+              <option [value]="item.id" *ngFor="let item of collectors">{{item.userName}}</option>
+            </select>
+
+          </div>
+        </div>
+        <!-- /// col2 -->
+        <div class="row">
+          <label>Select Collector 2</label>
+          <div class='col-sm-6'>
+            <select class="form-control" [(ngModel)]="newcol2.CollectorId">
+
+
+              <option [value]="item.id" *ngFor="let item of collectors">{{item.userName}}</option>
+            </select>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Select Collector 3</label>
+          <div class='col-sm-6'>
+            <select class="form-control" [(ngModel)]="newcol3.CollectorId">
+
+
+              <option [value]="item.id" *ngFor="let item of collectors">{{item.userName}}</option>
+            </select>
+
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <!-- /// -->
+      <button class="btn-success " style="width:80px;height:40px;" (click)="save()">add</button>
+    </mat-card-content>
+  </mat-card>
+</div>
