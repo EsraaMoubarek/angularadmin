@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Homeee
+              <a class="nav-link" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -36,15 +36,45 @@
       </div>
     </nav>
     <!-- //// -->
-    <google-map width="1650" height="600" [center]="position">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Today Schedule</h1>
+        <p class="lead">{{ myDate | date :'short'}}
+        </p>
+        </div>
+    </div>
+    <google-map width="1110" height="400" [center]="position">
       <map-marker [position]="position"
       [label]="label"
       [title]="title">
-    
-      </map-marker> 
+    </map-marker>
+      <map-marker *ngFor="let i in todyScheds ;  " [title]="title"  [label]="label"  [position]="position"> 
+    </map-marker>
+
     
     </google-map>
-    
+    <br/>
+    <table   class="table table-active ">
+      <thead>
+        <tr class="table-info" ngclass="btn-primary">
+          <th scope="col">Region</th>
+          <th scope="col">Driver Name</th>
+          <th scope="col">Collectors</th>
+  
+        </tr>
+      </thead>
+      <tbody>
+      <tr class="table-success" *ngFor="let schedule of todyScheds ">
+        <td>{{schedule.region}}</td>
+        <td>{{schedule.driver }}</td>
+        <td>
+          <tr class="table-success table-borderless " *ngFor="let coll of schedule.collecList" >
+            <td >{{coll}}</td>
+          </tr>
+        </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 

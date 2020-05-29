@@ -20,7 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { WastepriceComponent } from './wasteprice/wasteprice.component';
 import { EditWastePriceComponent } from './edit-waste-price/edit-waste-price.component';
 import { ManagerHomeComponent } from './manager-home/manager-home.component';
-
+import {} from '@angular/material'
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { ManagerHomeComponent } from './manager-home/manager-home.component';
     WastepriceComponent,
     EditWastePriceComponent,
     ManagerHomeComponent,
-   
+  
   ],
   imports: [
     BrowserModule,  
