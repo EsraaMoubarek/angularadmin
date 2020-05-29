@@ -9,6 +9,7 @@ import {
 } from '@angular/material';  
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import {GoogleMapsModule} from '@angular/google-maps'
 //
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -45,7 +46,8 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,  
     MatTooltipModule,  
     MatToolbarModule,  
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleMapsModule
     //
   ],
   providers: [HttpClientModule,ScheduleService,MatDatepickerModule],

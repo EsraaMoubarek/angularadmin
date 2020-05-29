@@ -15,5 +15,15 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  title = 'googleMaps';
+  position={
+    lat:31.200092,
+    lng:29.918739
+  };
+
+  label={
+    color:'black',
+    text:'Marker'
+  };
 
 }

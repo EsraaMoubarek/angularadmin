@@ -33,7 +33,14 @@
       </div>
     </nav>
     <!-- //// -->
-
+    <google-map width="1650" height="600" [center]="position">
+      <map-marker [position]="position"
+      [label]="label"
+      [title]="title">
+    
+      </map-marker> 
+    
+    </google-map>
     
   </div>
 </body>
