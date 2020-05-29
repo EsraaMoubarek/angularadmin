@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ScheduleService } from './schedule.service'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -17,6 +17,9 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { HomeComponent } from './home/home.component';
 import { HomeloginComponent } from './homelogin/homelogin.component';
 import { LoginComponent } from './login/login.component';
+import { WastepriceComponent } from './wasteprice/wasteprice.component';
+import { EditWastePriceComponent } from './edit-waste-price/edit-waste-price.component';
+import { ManagerHomeComponent } from './manager-home/manager-home.component';
 
 
 @NgModule({
@@ -26,6 +29,9 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     HomeloginComponent,
     LoginComponent,
+    WastepriceComponent,
+    EditWastePriceComponent,
+    ManagerHomeComponent,
    
   ],
   imports: [
@@ -49,6 +55,10 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     GoogleMapsModule
     //
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+  
   ],
   providers: [HttpClientModule,ScheduleService,MatDatepickerModule],
   bootstrap: [AppComponent]
