@@ -6,8 +6,48 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfnIDSKJS5Iz3z2pkxSV1JUDpFqcOwWCU" type="text/javascript"></script>
+    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtAcjVpEkyKhhHnL8BBopWZhigLaadEN0" type="text/javascript"></script> 
 </head>
 <body>
   <app-root></app-root>
+  <div id="map" style="width: 900px; height: 300px;"></div>
+
+  <script type="text/javascript">
+    console.log("hi");
+    var locations = [
+      ['Alex', 31.21564, 29.95527, 1],
+      ['Kfr ElZayat', 30.8248, 30.81805, 3],
+      ['Damanhour', 31.03408, 30.46823, 2],
+      ['El Mahalla', 30.97063, 31.1669, 4],
+      ['El Mansoura', 31.03637, 31.38069, 5]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(30.8248, 30.81805),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function (marker, i) {
+        return function () {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+
+  </script>
 </body>
 </html>
