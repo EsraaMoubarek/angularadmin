@@ -10,7 +10,7 @@ import { SchCol } from './sch-col';
   providedIn: 'root'
 })
 export class ScheduleService {
-  url ='http://localhost:50856/home'
+  url ='http://localhost:7777/home'
   constructor(private http: HttpClient) { }
   getall(): Observable<Schedule[]> { 
     
@@ -25,23 +25,23 @@ export class ScheduleService {
   ///
   createSchcol(schcol:SchCol): Observable<SchCol> {  
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };  
-    return this.http.post<SchCol>('http://localhost:50856/addschcol',  
+    return this.http.post<SchCol>('http://localhost:7777/addschcol',  
     schcol, httpOptions);  
   }
   ///
   getallreg(): Observable<Region[]> { 
      
-    return this.http.get<Region[]>('http://localhost:50856/region');  
+    return this.http.get<Region[]>('http://localhost:7777/region');  
   }  
   //
   getalldri(): Observable<User[]> { 
     
-    return this.http.get<User[]>('http://localhost:50856/driver');  
+    return this.http.get<User[]>('http://localhost:7777/driver');  
   } 
   //
   getallcol(): Observable<User[]> { 
     
-    return this.http.get<User[]>('http://localhost:50856/collector');  
+    return this.http.get<User[]>('http://localhost:7777/collector');  
   }
   ////
   delSchedule(id:string): Observable<Schedule> {  
@@ -50,7 +50,7 @@ export class ScheduleService {
   } 
   delScheduleCol(id:string): Observable<SchCol> {  
     //const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };  
-    return this.http.delete<SchCol>('http://localhost:50856/'+id);  
+    return this.http.delete<SchCol>('http://localhost:7777/'+id);  
   } 
   
 
