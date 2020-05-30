@@ -12,7 +12,7 @@ export class EditWastePriceComponent implements OnInit {
   editWastePrice(){
   //  console.log(this.test.waste)
   this.wasteServ.editWastePriceServ();
-  this.router.navigateByUrl("/admin");}
+  this.router.navigateByUrl("/Waste");}
   constructor(public http:HttpClient,public router:Router,public wasteServ:WastepriceService ) { }
 
   ngOnInit(): void {

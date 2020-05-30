@@ -5,6 +5,7 @@ import{ScheduleComponent} from '../app/schedule/schedule.component'
 import{HomeloginComponent} from '../app/homelogin/homelogin.component'
 import{LoginComponent} from '../app/login/login.component'
 import {WastepriceComponent} from '../app/wasteprice/wasteprice.component' 
+import {EditWastePriceComponent} from '../app/edit-waste-price/edit-waste-price.component'
 const routes: Routes = [
   {
     path: 'login',
@@ -26,6 +27,10 @@ const routes: Routes = [
 {
   path: 'Waste',
   component: WastepriceComponent,
+},
+{
+  path: 'edit',
+  component: EditWastePriceComponent,
 },
 { 
   path: '',

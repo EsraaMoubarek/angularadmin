@@ -15,6 +15,13 @@ export class WastepriceComponent implements OnInit {
   this.wasteServ.getWasteData().subscribe(a=>{this.wastes=a})
   this.wasteServ.getAvgPrice().subscribe(a=>{this.avgPrice=a})
   }
+  edit(r:string,i:number){
+    // this.ee. edit=true
+    console.log(this.wasteServ.waste)
+  this.wasteServ.waste.Name=r
+  this.wasteServ.waste.Id=i
+  console.log(this.wasteServ.waste)
+    }
   ngOnInit(): void {
 
     this.getData()

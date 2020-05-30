@@ -17,7 +17,7 @@ return this.http.get<number>("http://localhost:"+this.port.port+"/api/waste/GetS
 
 }
 editWastePriceServ(){
-  this.http.post("http://localhost:"+this.port.port+"/api/points/PostWaste" ,this.waste).subscribe(a=>{console.log(a)
+  this.http.post("http://localhost:"+this.port.port+"/api/waste/PostWaste" ,this.waste).subscribe(a=>{console.log(a)
   console.log("hi")
   })}
   constructor(private http:HttpClient) { 

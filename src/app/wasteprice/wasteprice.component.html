@@ -35,7 +35,10 @@
   </div>
   <!-- //// -->
   <div class="container">
-  
+    <div class="display-4" style="text-align: center;">Avg Price for 1 KG</div>
+    <div class="display-3" style="text-align: center;">{{avgPrice}}</div>
+    <br/>
+    
     <mat-card>
       <mat-toolbar color="Green">
         <div align="center" style="color:rgb(47, 158, 37);" class="text-center h2">
@@ -50,8 +53,7 @@
               <!-- <th class="tbl2">Date</th>   -->
               <th scope="col">Date and Time</th>
               <th scope="col">Driver Name</th>
-              <th scope="col">Region</th>
-  
+              
               <tr *ngFor="let p of wastes,let i=index ">
       
                 <td>
@@ -62,7 +64,7 @@
                  {{p.price}}
                </td> 
                <td>
-                <a #r class="btn btn-success" routerLink="/">Edit Price</a>
+                <a #r (click)="edit(p.name,p.id)" class="btn btn-success" routerLink="/edit">Edit Price</a>
               </td>
                 </tr>
           </table>
