@@ -1,0 +1,72 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+  
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Schedule</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link">Wastes Price</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- //// -->
+  <div class="container">
+  
+    <mat-card>
+      <mat-toolbar color="Green">
+        <div align="center" style="color:rgb(47, 158, 37);" class="text-center h2">
+          Waste Prices
+        </div>
+      </mat-toolbar>
+      <mat-card-content>
+        <form >
+          <table class="table table-bordered text-center">
+            <tr ngclass="btn-primary">
+              <th scope="col">Id</th>
+              <!-- <th class="tbl2">Date</th>   -->
+              <th scope="col">Date and Time</th>
+              <th scope="col">Driver Name</th>
+              <th scope="col">Region</th>
+  
+              <tr *ngFor="let p of wastes,let i=index ">
+      
+                <td>
+                 {{p.name}}
+               </td>
+               
+               <td>
+                 {{p.price}}
+               </td> 
+               <td>
+                <a #r class="btn btn-success" routerLink="/">Edit Price</a>
+              </td>
+                </tr>
+          </table>
+        </form>
+        <hr>
+        <!-- /// -->
+       </mat-card-content>

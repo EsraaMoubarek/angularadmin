@@ -16,6 +16,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { HomeComponent } from './home/home.component';
 import { HomeloginComponent } from './homelogin/homelogin.component';
 import { LoginComponent } from './login/login.component';
+import { WastepriceComponent } from './wasteprice/wasteprice.component';
+import { EditWastePriceComponent } from './edit-waste-price/edit-waste-price.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     HomeloginComponent,
     LoginComponent,
+    WastepriceComponent,
+    EditWastePriceComponent,
    
   ],
   imports: [

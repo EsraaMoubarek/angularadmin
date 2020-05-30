@@ -4,6 +4,7 @@ import{HomeComponent} from '../app/home/home.component'
 import{ScheduleComponent} from '../app/schedule/schedule.component'
 import{HomeloginComponent} from '../app/homelogin/homelogin.component'
 import{LoginComponent} from '../app/login/login.component'
+import {WastepriceComponent} from '../app/wasteprice/wasteprice.component' 
 const routes: Routes = [
   {
     path: 'login',
@@ -23,6 +24,10 @@ const routes: Routes = [
   component: ScheduleComponent,
 },
 {
+  path: 'Waste',
+  component: WastepriceComponent,
+},
+{ 
   path: '',
   component: HomeloginComponent,
   pathMatch:"full",
