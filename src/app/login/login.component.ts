@@ -57,6 +57,9 @@ export class LoginComponent implements OnInit {
       if (decot.role == "admin") {
         this.router.navigateByUrl("/Home");
       }
+      else if(decot.role == "manager") {
+        this.router.navigateByUrl("/Manager");
+      }
       else {
         alert("Invalid LogIn");
       }

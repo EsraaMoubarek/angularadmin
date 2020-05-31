@@ -6,6 +6,7 @@ import{HomeloginComponent} from '../app/homelogin/homelogin.component'
 import{LoginComponent} from '../app/login/login.component'
 import {WastepriceComponent} from '../app/wasteprice/wasteprice.component' 
 import {EditWastePriceComponent} from '../app/edit-waste-price/edit-waste-price.component'
+import {ManagerHomeComponent} from '../app/manager-home/manager-home.component'
 const routes: Routes = [
   {
     path: 'login',
@@ -32,6 +33,10 @@ const routes: Routes = [
 {
   path: 'edit',
   component: EditWastePriceComponent,
+},
+{
+  path: 'Manager',
+  component: ManagerHomeComponent,
 },
 { 
   path: '',

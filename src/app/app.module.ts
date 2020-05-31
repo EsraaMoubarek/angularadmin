@@ -9,6 +9,8 @@ import {
 } from '@angular/material';  
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { GoogleChartsModule } from 'angular-google-charts';
+
 //
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { WastepriceComponent } from './wasteprice/wasteprice.component';
 import { EditWastePriceComponent } from './edit-waste-price/edit-waste-price.component';
 import { ManagerHomeComponent } from './manager-home/manager-home.component';
+import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
 
 
 @NgModule({
@@ -31,6 +34,7 @@ import { ManagerHomeComponent } from './manager-home/manager-home.component';
     WastepriceComponent,
     EditWastePriceComponent,
     ManagerHomeComponent,
+    BarTypClntRgnComponent,
    
   ],
   imports: [
@@ -51,7 +55,8 @@ import { ManagerHomeComponent } from './manager-home/manager-home.component';
     MatInputModule,  
     MatTooltipModule,  
     MatToolbarModule,  
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleChartsModule
     //
   ],
   schemas: [
