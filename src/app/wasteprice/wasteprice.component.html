@@ -49,12 +49,12 @@
         <form >
           <table class="table table-bordered text-center">
             <tr ngclass="btn-primary">
-              <th scope="col">Id</th>
+              <th scope="col">Waste</th>
               <!-- <th class="tbl2">Date</th>   -->
-              <th scope="col">Date and Time</th>
-              <th scope="col">Driver Name</th>
+              <th scope="col">Price LE/Ton</th>
+              <th scope="col">Edit Price</th>
               
-              <tr *ngFor="let p of wastes,let i=index ">
+              <tr *ngFor="let p of this.wasteServ.wastesShared,let i=index ">
       
                 <td>
                  {{p.name}}

@@ -8,7 +8,8 @@ import { Waste } from '../_models/waste';
 })
 export class WastepriceService {
   port:Port=new Port()
-  public waste:Waste=new Waste();
+  public wastesShared:Waste[]
+  public editWaste:Waste = new Waste()
 getWasteData(){
 return this.http.get<Waste[]>("http://localhost:"+this.port.port+"/api/waste/GetWasteData")
 }
@@ -17,7 +18,7 @@ return this.http.get<number>("http://localhost:"+this.port.port+"/api/waste/GetS
 
 }
 editWastePriceServ(){
-  this.http.post("http://localhost:"+this.port.port+"/api/waste/PostWaste" ,this.waste).subscribe(a=>{console.log(a)
+  this.http.post("http://localhost:"+this.port.port+"/api/waste/PostWaste" ,this.editWaste).subscribe(a=>{console.log(a)
   console.log("hi")
   })}
   constructor(private http:HttpClient) { 
