@@ -101,13 +101,18 @@ export class ScheduleComponent implements OnInit {
     if (ans) {
       this.scheduleService.delScheduleCol(this.id).subscribe(a => {
         console.log(a);
-        this.scheduleService.delSchedule(this.id).subscribe(a => console.log(a))
+        this.scheduleService.delSchedule(this.id).subscribe(a => {
+          
+          
+          console.log(a)
+          this.scheduleService.getall().subscribe(a=>console.log("this"+a));
+           this.loadAllSchedules();
+
+        })
 
 
       })
-      this.scheduleService.getall().subscribe(a=>console.log("this"+a));
-      this.loadAllSchedules();
-
+      
       //this.router.navigateByUrl("/Schedule");
       //window.location.reload();
     }

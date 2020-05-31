@@ -1,4 +1,11 @@
 export class User {
 
-    UserName:string;
+    Email:string;
+    PhoneNumber:string;
+    userName:string;
+    Password:string;
+    Id:string;
+    EmailConfirmed:string;
+    RoleId:string;
+
 }

@@ -16,6 +16,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { HomeComponent } from './home/home.component';
 import { HomeloginComponent } from './homelogin/homelogin.component';
 import { LoginComponent } from './login/login.component';
+import { AdddriverComponent } from './adddriver/adddriver.component';
+import { AddcolComponent } from './addcol/addcol.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     HomeloginComponent,
     LoginComponent,
+    AdddriverComponent,
+    AddcolComponent,
    
   ],
   imports: [
