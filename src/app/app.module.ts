@@ -18,18 +18,18 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { HomeComponent } from './home/home.component';
 import { HomeloginComponent } from './homelogin/homelogin.component';
 import { LoginComponent } from './login/login.component';
-<<<<<<< HEAD
+//<<<<<<< HEAD
 import { AdddriverComponent } from './adddriver/adddriver.component';
 import { AddcolComponent } from './addcol/addcol.component';
-=======
+//=======
 import { WastepriceComponent } from './wasteprice/wasteprice.component';
 import { EditWastePriceComponent } from './edit-waste-price/edit-waste-price.component';
 import { ManagerHomeComponent } from './manager-home/manager-home.component';
-<<<<<<< HEAD
->>>>>>> 7d62aa389dd3a61456e18956bdb36c42877dbbd0
-=======
+//<<<<<<< HEAD
+//>>>>>>> 7d62aa389dd3a61456e18956bdb36c42877dbbd0
+//=======
 import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
->>>>>>> 8356c9f3295a7ac1869c2b1f8e4f83810bca0ac6
+//>>>>>>> 8356c9f3295a7ac1869c2b1f8e4f83810bca0ac6
 
 
 @NgModule({
@@ -39,18 +39,18 @@ import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.comp
     HomeComponent,
     HomeloginComponent,
     LoginComponent,
-<<<<<<< HEAD
+//<<<<<<< HEAD
     AdddriverComponent,
     AddcolComponent,
-=======
+//=======
     WastepriceComponent,
     EditWastePriceComponent,
     ManagerHomeComponent,
-<<<<<<< HEAD
->>>>>>> 7d62aa389dd3a61456e18956bdb36c42877dbbd0
-=======
+//<<<<<<< HEAD
+//>>>>>>> 7d62aa389dd3a61456e18956bdb36c42877dbbd0
+//=======
     BarTypClntRgnComponent,
->>>>>>> 8356c9f3295a7ac1869c2b1f8e4f83810bca0ac6
+//>>>>>>> 8356c9f3295a7ac1869c2b1f8e4f83810bca0ac6
    
   ],
   imports: [
