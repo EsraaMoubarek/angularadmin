@@ -10,7 +10,11 @@ import { AddcolComponent } from './addcol/addcol.component';
 =======
 import {WastepriceComponent} from '../app/wasteprice/wasteprice.component' 
 import {EditWastePriceComponent} from '../app/edit-waste-price/edit-waste-price.component'
+<<<<<<< HEAD
 >>>>>>> 7d62aa389dd3a61456e18956bdb36c42877dbbd0
+=======
+import {ManagerHomeComponent} from '../app/manager-home/manager-home.component'
+>>>>>>> 8356c9f3295a7ac1869c2b1f8e4f83810bca0ac6
 const routes: Routes = [
   {
     path: 'login',
@@ -45,6 +49,10 @@ const routes: Routes = [
 {
   path: 'edit',
   component: EditWastePriceComponent,
+},
+{
+  path: 'Manager',
+  component: ManagerHomeComponent,
 },
 { 
   path: '',

@@ -10,7 +10,7 @@ export class ManagerService {
   port:Port=new Port()
   public sharedWaste:Waste[]
   GetClientInRegion(){
-  return  this.http.get<(string|number )[][]>("http://localhost:"+this.port.port+"/api/client/GetClientInRegion")
+  return  this.http.get<(string|number )[][]>("http://localhost:"+this.port.port+"/api/manager/GetClientInRegion")
   }
   constructor(private http:HttpClient) { }
 }
