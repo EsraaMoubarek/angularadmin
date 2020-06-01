@@ -12,7 +12,7 @@ export class BarTypClntRgnComponent implements OnInit {
   public data:(string|number)[][]
 port:Port=new Port() 
 
-  title = 'Population (in millions)';
+  title = 'Ratio of Restaurants to Apartments in certain region ';
   type = 'BarChart';
   hi = [
      ["2012", 900, 390],
@@ -24,7 +24,7 @@ port:Port=new Port()
   columnNames = ['number', 'apartment','restaurant'];
   options = {   
      hAxis: {
-        title: 'Year'
+        title: 'number'
      },
      vAxis:{
         minValue:0
@@ -33,7 +33,7 @@ port:Port=new Port()
   width = 550;
   height = 400;
   constructor(public http:HttpClient) { 
-   this.http.get<(string|number)[][]>("http://localhost:"+this.port.port+"/api/client/GetTypeOfClientsInRegion").subscribe(a=>{this.data=a;console.log(a)})
+   this.http.get<(string|number)[][]>("http://localhost:"+this.port.port+"/api/manager/GetTypeOfClientsInRegion").subscribe(a=>{this.data=a;console.log(a)})
   }
 
   ngOnInit(): void {

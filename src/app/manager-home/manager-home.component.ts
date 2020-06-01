@@ -12,7 +12,8 @@ export class ManagerHomeComponent implements OnInit {
 
   public data: (string|number )[][]
 
-title = 'The most region with clients';
+title = 'The most region with clients ';
+
    type = 'PieChart';
    hi = [
       ['Firefox', 45.0],
@@ -31,6 +32,7 @@ title = 'The most region with clients';
   constructor(public http:HttpClient,public wasteServ:WastepriceService,public mngServ:ManagerService) {
    this.mngServ.GetClientInRegion().subscribe(a=>{console.log(a),  
       this.data=a})
+      this.getData()
    }
 
    getData(){

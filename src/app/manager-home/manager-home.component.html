@@ -16,6 +16,9 @@
  
              </a>
            </li>
+           <li class="nav-item active">
+            <a class="nav-link">Home</a>
+          </li>
            <li class="nav-item">
              <a class="nav-link" href="#">Schedule</a>
            </li>
@@ -25,12 +28,8 @@
            <li class="nav-item">
              <a class="nav-link" href="/addcol"> Collectors</a>
              </li>
-           <li class="nav-item active">
-               <a class="nav-link">Wastes Price</a>
-             </li>
-           <li class="nav-item">
-             <a class="nav-link" href="#">Services</a>
-           </li>
+           
+          
            <li class="nav-item">
              <a class="nav-link" href="#">Contact</a>
            </li>
@@ -58,17 +57,18 @@
     </div>
     </div>
     </div>
-
+    <div class="col-lg-2">
+    </div>
     <div class="container-fluid" > 
       <div class="row">
          <div class="col-lg-4">
+            <form>
             <table class="table table-bordered text-center">
                <tr ngclass="btn-primary">
                  <th scope="col">Waste</th>
                  <!-- <th class="tbl2">Date</th>   -->
                  <th scope="col">Price LE/Ton</th>
-                 <th scope="col">Edit Price</th>
-                 
+             
                  <tr *ngFor="let p of this.wasteServ.wastesShared,let i=index ">
          
                    <td>
@@ -80,10 +80,17 @@
                   </td> 
                    </tr>
              </table>
+            </form>
          </div>
          <div class="col-lg-4">
              
 <app-bar-typ-clnt-rgn></app-bar-typ-clnt-rgn>
+<div class="row">
+   <div class="col-lg-3">
+   </div>
+   <div class="col-lg-9">
+<p style="font-style: italic;margin-top: 0;padding-top: 0;">red for restaurant,blue for apartment</p>
+</div></div>
 </div>
 </div>
 </div>
