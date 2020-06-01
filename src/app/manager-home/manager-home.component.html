@@ -1,7 +1,50 @@
+<div class="container">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+     <div class="container">
+       <a class="navbar-brand" href="#">
+         <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
+       </a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+         aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="navbar-nav ml-auto">
+           <li class="nav-item ">
+             <a class="nav-link" href="#">Home
+               <span class="sr-only">(current)</span>
+ 
+             </a>
+           </li>
+           <li class="nav-item active">
+            <a class="nav-link">Home</a>
+          </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#">Schedule</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="/adddriver"> Drivers</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="/addcol"> Collectors</a>
+             </li>
+           
+          
+           <li class="nav-item">
+             <a class="nav-link" href="#">Contact</a>
+           </li>
+         </ul>
+       </div>
+     </div>
+   </nav>
+ </div>
+
+
+
 <div class="container-fluid" > 
     <div class="row">
        <div class="col-lg-4">
-          hiiiii
+         
     <google-chart #chart
        [title]="title"
        [type]="type"
@@ -14,3 +57,40 @@
     </div>
     </div>
     </div>
+    <div class="col-lg-2">
+    </div>
+    <div class="container-fluid" > 
+      <div class="row">
+         <div class="col-lg-4">
+            <form>
+            <table class="table table-bordered text-center">
+               <tr ngclass="btn-primary">
+                 <th scope="col">Waste</th>
+                 <!-- <th class="tbl2">Date</th>   -->
+                 <th scope="col">Price LE/Ton</th>
+             
+                 <tr *ngFor="let p of this.wasteServ.wastesShared,let i=index ">
+         
+                   <td>
+                    {{p.name}}
+                  </td>
+                  
+                  <td>
+                    {{p.price}}
+                  </td> 
+                   </tr>
+             </table>
+            </form>
+         </div>
+         <div class="col-lg-4">
+             
+<app-bar-typ-clnt-rgn></app-bar-typ-clnt-rgn>
+<div class="row">
+   <div class="col-lg-3">
+   </div>
+   <div class="col-lg-9">
+<p style="font-style: italic;margin-top: 0;padding-top: 0;">red for restaurant,blue for apartment</p>
+</div></div>
+</div>
+</div>
+</div>
