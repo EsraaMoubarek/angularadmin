@@ -9,18 +9,30 @@ import {
 } from '@angular/material';  
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+
 import {GoogleMapsModule} from '@angular/google-maps'
-//
+
+import { GoogleChartsModule } from 'angular-google-charts';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { HomeComponent } from './home/home.component';
 import { HomeloginComponent } from './homelogin/homelogin.component';
 import { LoginComponent } from './login/login.component';
+
+import { AdddriverComponent } from './adddriver/adddriver.component';
+import { AddcolComponent } from './addcol/addcol.component';
+
 import { WastepriceComponent } from './wasteprice/wasteprice.component';
 import { EditWastePriceComponent } from './edit-waste-price/edit-waste-price.component';
 import { ManagerHomeComponent } from './manager-home/manager-home.component';
+
 import {} from '@angular/material'
+
+
+import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
+
 
 @NgModule({
   declarations: [
@@ -29,10 +41,19 @@ import {} from '@angular/material'
     HomeComponent,
     HomeloginComponent,
     LoginComponent,
+//<<<<<<< HEAD
+    AdddriverComponent,
+    AddcolComponent,
+
     WastepriceComponent,
     EditWastePriceComponent,
     ManagerHomeComponent,
-  
+
+
+    BarTypClntRgnComponent,
+
+   
+
   ],
   imports: [
     BrowserModule,  
@@ -53,7 +74,10 @@ import {} from '@angular/material'
     MatTooltipModule,  
     MatToolbarModule,  
     AppRoutingModule,
-    GoogleMapsModule
+
+    GoogleMapsModule,
+
+    GoogleChartsModule
     //
   ],
   schemas: [
