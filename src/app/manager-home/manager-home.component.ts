@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ManagerService } from '../_services/manager.service';
+import { WastepriceService } from '../_services/wasteprice.service';
 
 @Component({
   selector: 'app-manager-home',
@@ -11,7 +12,7 @@ export class ManagerHomeComponent implements OnInit {
 
   public data: (string|number )[][]
 
-title = 'Browser market shares at a specific website, 2014';
+title = 'The most region with clients';
    type = 'PieChart';
    hi = [
       ['Firefox', 45.0],
@@ -21,18 +22,22 @@ title = 'Browser market shares at a specific website, 2014';
       ['Opera', 6.2],
       ['Others', 0.7] 
    ];
-   columnNames = ['Browser', 'Percentage'];
+   columnNames = ['Region', 'Percentage'];
    options = {    
    };
    width = 550;
    height = 400;
   
-  constructor(public http:HttpClient,public mngServ:ManagerService) {
+  constructor(public http:HttpClient,public wasteServ:WastepriceService,public mngServ:ManagerService) {
    this.mngServ.GetClientInRegion().subscribe(a=>{console.log(a),  
       this.data=a})
    }
 
-
+   getData(){
+    this.wasteServ.getWasteData().subscribe(a=>{this.wasteServ.wastesShared=a
+    console.log(a)})
+   // this.wasteServ.getAvgPrice().subscribe(a=>{this.avgPrice=a})
+    }
   ngOnInit(): void {
   }
 

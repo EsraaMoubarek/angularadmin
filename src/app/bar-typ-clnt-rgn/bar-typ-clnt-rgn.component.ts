@@ -21,7 +21,7 @@ port:Port=new Port()
      ["2015", 1250, 480],
      ["2016", 1530, 540]
   ];
-  columnNames = ['Year', 'apartment','restaurant'];
+  columnNames = ['number', 'apartment','restaurant'];
   options = {   
      hAxis: {
         title: 'Year'
