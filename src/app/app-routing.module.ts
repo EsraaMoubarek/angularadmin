@@ -14,11 +14,21 @@ import {EditWastePriceComponent} from '../app/edit-waste-price/edit-waste-price.
 //>>>>>>> 7d62aa389dd3a61456e18956bdb36c42877dbbd0
 //=======
 import {ManagerHomeComponent} from '../app/manager-home/manager-home.component'
+import { CompanyComponent } from './company/company.component';
+import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 //>>>>>>> 8356c9f3295a7ac1869c2b1f8e4f83810bca0ac6
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'promonly',
+    component: AddPromOnlyComponent,
+  },
+  {
+    path: 'addcomp',
+    component: CompanyComponent,
   },
   {
     path: 'adddriver',

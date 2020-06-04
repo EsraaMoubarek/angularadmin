@@ -32,6 +32,8 @@ import {} from '@angular/material'
 
 
 import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
+import { CompanyComponent } from './company/company.component';
+import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 
 
 @NgModule({
@@ -51,6 +53,12 @@ import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.comp
 
 
     BarTypClntRgnComponent,
+
+
+    CompanyComponent,
+
+
+    AddPromOnlyComponent,
 
    
 
