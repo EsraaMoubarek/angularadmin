@@ -1,5 +1,5 @@
 export class Promotion {
-    Id:string;
+    id:number;
     name:string;
     RequiredPoints:string;
     DateFrom:Date;
