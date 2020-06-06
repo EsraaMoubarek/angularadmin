@@ -55,11 +55,11 @@
         </div>
     </div>
     <google-map width="1110" height="400" [center]="position">
-      <map-marker [position]="position"
+     <!--<map-marker [position]="position"
       [label]="label"
       [title]="title">
-    </map-marker>
-      <map-marker *ngFor="let i in todyScheds ;  " [title]="title"  [label]="label"  [position]="position"> 
+    </map-marker>--> 
+      <map-marker *ngFor="let mark of todyScheds ; let i = index " [position]="markers[i].position" [label]="markers[i].label" title="{{markers[i].title}}"    > 
     </map-marker>
 
     

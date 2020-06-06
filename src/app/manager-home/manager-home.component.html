@@ -19,8 +19,9 @@
              </a>
            </li>
            <li class="nav-item active">
-            <a class="nav-link" href="/Home">Home</a>
+            <a class="nav-link" href="/Home">Home Manager</a>
           </li>
+          <!--
            <li class="nav-item">
              <a class="nav-link" href="/Schedule">Schedule</a>
            </li>
@@ -30,6 +31,7 @@
            <li class="nav-item">
              <a class="nav-link" href="/addcol"> Add Collector</a>
              </li>
+             -->
              <li class="nav-item">
               <a class="nav-link" routerLink="/Waste">Waste Prices</a>
             </li>
@@ -48,56 +50,60 @@
 
 
 
-<div class="container-fluid" > 
-    <div class="row">
-       <div class="col-lg-4">
-         
-    <google-chart #chart
-       [title]="title"
-       [type]="type"
-       [data]="data"
-       [columnNames]="columnNames"
-       [options]="options"
-       [width]="width"
-       [height]="height" >
-    </google-chart>
-    </div>
-    </div>
-    </div>
-    <div class="col-lg-2">
-    </div>
-    <div class="container-fluid" > 
-      <div class="row">
-         <div class="col-lg-4">
-            <form>
-            <table class="table table-bordered text-center">
-               <tr ngclass="btn-primary">
-                 <th scope="col">Waste</th>
-                 <!-- <th class="tbl2">Date</th>   -->
-                 <th scope="col">Price LE/Ton</th>
-             
-                 <tr *ngFor="let p of this.wasteServ.wastesShared,let i=index ">
-         
-                   <td>
-                    {{p.name}}
-                  </td>
-                  
-                  <td>
-                    {{p.price}}
-                  </td> 
-                   </tr>
-             </table>
-            </form>
-         </div>
-         <div class="col-lg-4">
-             
+
+ <div class="container-fluid" > 
+  <div class="row">
+    
+
+     <div class="col-lg-5">
+       
+  <google-chart #chart
+     [title]="title"
+     [type]="type"
+     [data]="data"
+     [columnNames]="columnNames"
+     [options]="options"
+     [width]="width"
+     [height]="height" >
+  </google-chart>
+  </div>
+  <!---->
+  
+      <div class="col-lg-6">
+           
 <app-bar-typ-clnt-rgn></app-bar-typ-clnt-rgn>
 <div class="row">
-   <div class="col-lg-3">
-   </div>
-   <div class="col-lg-9">
+ <div class="col-lg-3">
+ </div>
+ <div class="col-lg-9">
 <p style="font-style: italic;margin-top: 0;padding-top: 0;">red for restaurant,blue for apartment</p>
 </div></div>
 </div>
 </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-4">
+    <form>
+      <table class="table table-bordered text-center">
+         <tr ngclass="btn-primary">
+           <th scope="col">Waste</th>
+           <!-- <th class="tbl2">Date</th>   -->
+           <th scope="col">Price LE/Ton</th>
+       
+           <tr *ngFor="let p of this.wasteServ.wastesShared,let i=index ">
+   
+             <td>
+              {{p.name}}
+            </td>
+            
+            <td>
+              {{p.price}}
+            </td> 
+             </tr>
+       </table>
+      </form>
+  </div>
+  <div class="col-lg-6"></div>
 </div>
