@@ -30,7 +30,6 @@ import { ManagerHomeComponent } from './manager-home/manager-home.component';
 
 import {} from '@angular/material'
 
-
 import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
 import { CompanyComponent } from './company/company.component';
 import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
@@ -106,5 +105,6 @@ import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.componen
   ],
   providers: [HttpClientModule,ScheduleService,MatDatepickerModule],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
