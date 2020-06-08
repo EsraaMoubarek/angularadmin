@@ -34,6 +34,9 @@ import {} from '@angular/material'
 import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
 import { CompanyComponent } from './company/company.component';
 import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.component';
 
 
 @NgModule({
@@ -43,7 +46,7 @@ import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
     HomeComponent,
     HomeloginComponent,
     LoginComponent,
-//<<<<<<< HEAD
+
     AdddriverComponent,
     AddcolComponent,
 
@@ -59,6 +62,15 @@ import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 
 
     AddPromOnlyComponent,
+
+
+    FeedbackComponent,
+
+
+    AdminNavbarComponent,
+
+
+    ManagerNavbarComponent,
 
    
 
@@ -86,7 +98,7 @@ import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
     GoogleMapsModule,
 
     GoogleChartsModule
-    //
+   
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

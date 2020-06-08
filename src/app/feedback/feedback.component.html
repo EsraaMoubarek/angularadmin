@@ -1,0 +1,21 @@
+<app-admin-navbar></app-admin-navbar>
+<br/>
+<table   class="table table-active ">
+    <thead>
+      <tr class="table-info" ngclass="btn-primary">
+        <th scope="col">User</th>
+        <th scope="col">Feedback</th>
+        <th scope="col">Category</th>
+        <th scope="col">Date</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    <tr class="table-success" *ngFor="let fb of feedbacks ">
+      <td>{{fb.clnt}}</td>
+      <td>{{fb.feedbackContent }}</td>
+      <td>{{fb.cat}}</td>
+      <td>{{fb.date}}</td>
+      </tr>
+    </tbody>
+  </table>

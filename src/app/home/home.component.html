@@ -37,6 +37,9 @@
               <a class="nav-link" routerLink="/Waste">Waste Prices</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" routerLink="/feedback">Feedbacks</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#">Services</a>
             </li>
             <li class="nav-item">
@@ -55,14 +58,8 @@
         </div>
     </div>
     <google-map width="1110" height="400" [center]="position">
-     <!--<map-marker [position]="position"
-      [label]="label"
-      [title]="title">
-    </map-marker>--> 
-      <map-marker *ngFor="let mark of todyScheds ; let i = index " [position]="markers[i].position" [label]="markers[i].label" title="{{markers[i].title}}"    > 
-    </map-marker>
-
-    
+          <map-marker *ngFor="let mark of todyScheds ; let i = index " [position]="markers[i].position" [label]="markers[i].label" title="{{markers[i].title}}"    > 
+          </map-marker>
     </google-map>
     <br/>
     <table   class="table table-active ">
