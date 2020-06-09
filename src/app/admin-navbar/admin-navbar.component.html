@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
@@ -13,7 +13,7 @@
         <ul class="navbar-nav ml-auto"style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1em;">
           <li class="nav-item active">
             <a class="nav-link" href="/Home">Home
-              <!--<span class="sr-only">(current)</span>-->
+              
             </a>
           </li>
           <li class="nav-item">
@@ -43,4 +43,27 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
+<!-- <mat-tab-group >
+    <mat-tab label="Schedule"></mat-tab>
+    <mat-tab label="Second"></mat-tab>
+    <mat-tab label="Third"></mat-tab>
+  </mat-tab-group> -->
+<!-- <nav> -->
+    
+
+    <nav mat-tab-nav-bar mat-align-tabs="center">
+  <!-- <div class="container mr-2"> -->
+
+        <a class="mr-3 mt-1">
+            <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
+          </a>
+          <p class="mr-3 mt-2"style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1.5em;color: rgb(68, 167, 68)">WasteApp</p>
+      
+  <!-- </div> -->
+
+      <a class="mt-2" mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">{{link.label}}
+
+      </a>
+    </nav>
+<!-- </nav> -->

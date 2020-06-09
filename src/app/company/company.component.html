@@ -1,7 +1,4 @@
-<div class="container">
-
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
@@ -43,105 +40,107 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-        <!-- //// -->
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="/addcomp" style="color:rgb(47, 158, 37);">With New Company</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/promonly" style="color:rgb(47, 158, 37);">With Existing Company</a>
-            </li>
-        </ul>
+        </nav> -->
+<!-- //// -->
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
 
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="/addcomp" style="color:rgb(47, 158, 37);">With New Company</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/promonly" style="color:rgb(47, 158, 37);">With Existing Company</a>
+        </li>
+    </ul>
+
+
+</div>
+<br>
+<div class="container">
+
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Company Name</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='text' class="form-control" [(ngModel)]="newcomp.name" />
+        </div>
+
+    </div>
+
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Promotion Name</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='text' class="form-control" [(ngModel)]="newprom.name" />
+        </div>
 
     </div>
     <br>
-    <div class="container">
+    <div class="row">
+        <div class='col-sm-2'>
 
-        <div class="row">
-            <div class='col-sm-2'>
-
-                <label>Company Name</label>
-            </div>
-            <div class='col-sm-4'>
-                <input type='text' class="form-control" [(ngModel)]="newcomp.name" />
-            </div>
-
+            <label>Required Points</label>
         </div>
-
-        <br>
-        <div class="row">
-            <div class='col-sm-2'>
-
-                <label>Promotion Name</label>
-            </div>
-            <div class='col-sm-4'>
-                <input type='text' class="form-control" [(ngModel)]="newprom.name" />
-            </div>
-
+        <div class='col-sm-4'>
+            <input type='text' class="form-control" [(ngModel)]="newprom.RequiredPoints" />
         </div>
-        <br>
-        <div class="row">
-            <div class='col-sm-2'>
-
-                <label>Required Points</label>
-            </div>
-            <div class='col-sm-4'>
-                <input type='text' class="form-control" [(ngModel)]="newprom.RequiredPoints" />
-            </div>
-
-        </div>
-        <br>
-        <div class="row">
-            <div class='col-sm-2'>
-
-                <label>No of Codes</label>
-            </div>
-            <div class='col-sm-4'>
-                <input type='number' class="form-control" [(ngModel)]="ncode" />
-            </div>
-
-        </div>
-        <br>
-        <div class="row">
-            <div class='col-sm-2'>
-
-                <label>Date From</label>
-            </div>
-            <div class='col-sm-4'>
-                <input type='date' class="form-control" [(ngModel)]="newprom.DateFrom" />
-            </div>
-
-        </div>
-        <br>
-        <div class="row">
-            <div class='col-sm-2'>
-
-                <label>Date To</label>
-            </div>
-            <div class='col-sm-4'>
-                <input type='date' class="form-control" [(ngModel)]="newprom.DateTo" />
-            </div>
-
-        </div>
-        <br>
-        <div class="row">
-            <div class='col-sm-2'>
-
-                <label>Details</label>
-            </div>
-            <div class='col-sm-4'>
-                <textarea type='text' class="form-control" [(ngModel)]="newprom.Details" ></textarea>
-            </div>
-
-        </div>
-
-
-        
-        <br>
-        <!-- /// -->
-        <button class="btn-success " style="width:80px;height:40px;" (click)="savecomp()">Add</button>
 
     </div>
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>No of Codes</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='number' class="form-control" [(ngModel)]="ncode" />
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Date From</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='date' class="form-control" [(ngModel)]="newprom.DateFrom" />
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Date To</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='date' class="form-control" [(ngModel)]="newprom.DateTo" />
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Details</label>
+        </div>
+        <div class='col-sm-4'>
+            <textarea type='text' class="form-control" [(ngModel)]="newprom.Details"></textarea>
+        </div>
+
+    </div>
+
+
+
+    <br>
+    <!-- /// -->
+    <button class="btn-success " style="width:80px;height:40px;" (click)="savecomp()">Add</button>
+
 </div>

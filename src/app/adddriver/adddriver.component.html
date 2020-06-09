@@ -1,7 +1,4 @@
-<div class="container">
-
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
@@ -41,57 +38,58 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-        <!-- //// -->
+        </nav> -->
+<!-- //// -->
+<app-admin-navbar></app-admin-navbar>
 
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <h3 style="color:rgb(47, 158, 37);">Add a New Driver </h3>
+    <div class="row">
+        <label>Driver Name</label>
+        <div class='col-sm-6'>
+            <input type='text' class="form-control" [(ngModel)]="newdriver.userName" />
+        </div>
 
     </div>
-
-
-
-
-
-
-
-    <div class="container">
-        <h3 style="color:rgb(47, 158, 37);">Add a New Driver </h3>
-        <div class="row">
-            <label>Driver Name</label>
-            <div class='col-sm-6'>
-                <input type='text' class="form-control" [(ngModel)]="newdriver.userName" />
-            </div>
-
+    <br>
+    <!-- /// -->
+    <div class="row">
+        <label>Email</label>
+        <div class='col-sm-6'>
+            <input type='text' class="form-control" [(ngModel)]="newdriver.Email" />
         </div>
-        <br>
-        <!-- /// -->
-        <div class="row">
-            <label>Email</label>
-            <div class='col-sm-6'>
-                <input type='text' class="form-control" [(ngModel)]="newdriver.Email" />
-            </div>
-
-        </div>
-        <br>
-        <!-- /// -->
-        <div class="row">
-            <label>Phone Number</label>
-            <div class='col-sm-6'>
-                <input type='text' class="form-control" [(ngModel)]="newdriver.PhoneNumber" />
-            </div>
-
-        </div>
-        <br>
-        <!-- /// -->
-        <div class="row">
-            <label>Password</label>
-            <div class='col-sm-6'>
-                <input type='password' class="form-control" [(ngModel)]="newdriver.Password" />
-            </div>
-
-        </div>
-        <br>
-        <!-- /// -->
-        <button class="btn-success " style="width:80px;height:40px;" (click)="savedriver()">Add</button>
 
     </div>
+    <br>
+    <!-- /// -->
+    <div class="row">
+        <label>Phone Number</label>
+        <div class='col-sm-6'>
+            <input type='text' class="form-control" [(ngModel)]="newdriver.PhoneNumber" />
+        </div>
+
+    </div>
+    <br>
+    <!-- /// -->
+    <div class="row">
+        <label>Password</label>
+        <div class='col-sm-6'>
+            <input type='password' class="form-control" [(ngModel)]="newdriver.Password" />
+        </div>
+
+    </div>
+    <br>
+    <!-- /// -->
+    <button class="btn-success " style="width:80px;height:40px;" (click)="savedriver()">Add</button>
+
 </div>

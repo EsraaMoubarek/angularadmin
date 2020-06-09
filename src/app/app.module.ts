@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {  
   MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, MatCardModule, MatSidenavModule,MatFormFieldModule,  
-  MatInputModule, MatTooltipModule, MatToolbarModule  
+  MatInputModule, MatTooltipModule  
 } from '@angular/material';  
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
@@ -28,8 +28,9 @@ import { WastepriceComponent } from './wasteprice/wasteprice.component';
 import { EditWastePriceComponent } from './edit-waste-price/edit-waste-price.component';
 import { ManagerHomeComponent } from './manager-home/manager-home.component';
 
-import {} from '@angular/material'
+import {MatTabsModule} from '@angular/material/tabs'
 
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
 import { CompanyComponent } from './company/company.component';
 import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
@@ -93,9 +94,10 @@ import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.componen
     MatTooltipModule,  
     MatToolbarModule,  
     AppRoutingModule,
-
+    //MatTabGroup,    
     GoogleMapsModule,
-
+     //MatTab,
+     MatTabsModule,
     GoogleChartsModule
    
   ],
