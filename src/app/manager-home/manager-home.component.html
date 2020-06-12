@@ -1,85 +1,35 @@
 <div class="container">
-   <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
-     <div class="container">
-       <a class="navbar-brand" href="#">
-         <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
-       </a>
-       <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1.5em;color: rgb(68, 167, 68)" >WasteApp</p>
 
-       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-         aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbarResponsive">
-         <ul class="navbar-nav ml-auto"style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1em;">
-           <li class="nav-item ">
-             <a class="nav-link" href="#">Home
-               <span class="sr-only">(current)</span>
- 
-             </a>
-           </li>
-           <li class="nav-item active">
-            <a class="nav-link" href="/Home">Home Manager</a>
-          </li>
-          <!--
-           <li class="nav-item">
-             <a class="nav-link" href="/Schedule">Schedule</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="/adddriver">Add Driver</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="/addcol"> Add Collector</a>
-             </li>
-             -->
-             <li class="nav-item">
-              <a class="nav-link" routerLink="/Waste">Waste Prices</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-          
-           <li class="nav-item">
-             <a class="nav-link" href="#">Contact</a>
-           </li>
-         </ul>
-       </div>
-     </div>
-   </nav>
- </div>
+  <app-manager-navbar></app-manager-navbar>
+
+</div>
 
 
 
 
- <div class="container-fluid" > 
+<!-- <div class="container-fluid">
   <div class="row">
-    
 
-     <div class="col-lg-5">
-       
-  <google-chart #chart
-     [title]="title"
-     [type]="type"
-     [data]="data"
-     [columnNames]="columnNames"
-     [options]="options"
-     [width]="width"
-     [height]="height" >
-  </google-chart>
+
+    <div class="col-lg-5">
+
+      <google-chart #chart [title]="title" [type]="type" [data]="data" [columnNames]="columnNames" [options]="options" [width]="width"
+        [height]="height">
+      </google-chart>
+    </div>
+
+    <div class="col-lg-6">
+
+      <app-bar-typ-clnt-rgn></app-bar-typ-clnt-rgn>
+      <div class="row">
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-9">
+          <p style="font-style: italic;margin-top: 0;padding-top: 0;">red for restaurant,blue for apartment</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <!---->
-  
-      <div class="col-lg-6">
-           
-<app-bar-typ-clnt-rgn></app-bar-typ-clnt-rgn>
-<div class="row">
- <div class="col-lg-3">
- </div>
- <div class="col-lg-9">
-<p style="font-style: italic;margin-top: 0;padding-top: 0;">red for restaurant,blue for apartment</p>
-</div></div>
-</div>
-</div>
 </div>
 
 <div class="row">
@@ -87,23 +37,79 @@
   <div class="col-lg-4">
     <form>
       <table class="table table-bordered text-center">
-         <tr ngclass="btn-primary">
-           <th scope="col">Waste</th>
-           <!-- <th class="tbl2">Date</th>   -->
-           <th scope="col">Price LE/Ton</th>
-       
-           <tr *ngFor="let p of this.wasteServ.wastesShared,let i=index ">
-   
-             <td>
+        <tr ngclass="btn-primary">
+          <th scope="col">Waste</th>
+          <th scope="col">Price LE/Ton</th>
+
+          <tr *ngFor="let p of this.wasteServ.wastesShared,let i=index ">
+
+            <td>
               {{p.name}}
             </td>
-            
+
             <td>
               {{p.price}}
-            </td> 
-             </tr>
-       </table>
-      </form>
+            </td>
+          </tr>
+      </table>
+    </form>
   </div>
   <div class="col-lg-6"></div>
+</div> -->
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+
+
+        <div class="col-lg-5">
+          <google-chart #chart [title]="title" [type]="type" [data]="data" [columnNames]="columnNames" [options]="options" [width]="width"
+            [height]="height">
+          </google-chart>
+        </div>
+
+
+        <div class="col-lg-6">
+
+          <app-bar-typ-clnt-rgn></app-bar-typ-clnt-rgn>
+          <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-9">
+              <p style="font-style: italic;margin-top: 0;padding-top: 0;">red for restaurant,blue for apartment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <div class="carousel-item">
+      <br>
+      <br>
+      <mat-toolbar color="Green">
+          <div  style="color:rgb(47, 158, 37);" class="text-center h2">
+            Waste Prices
+          </div>
+        </mat-toolbar>
+      <br>
+      <table class="table table-bordered text-center">
+        <tr ngclass="btn-primary">
+          <th scope="col">Waste</th>
+          <th scope="col">Price LE/Ton</th>
+
+          <tr *ngFor="let p of this.wasteServ.wastesShared,let i=index ">
+
+            <td>
+              {{p.name}}
+            </td>
+
+            <td>
+              {{p.price}}
+            </td>
+          </tr>
+      </table>
+    </div>
+
+  </div>
 </div>

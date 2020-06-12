@@ -9,9 +9,9 @@ import {
 } from '@angular/material';  
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-
+ import{MatTableModule,MatSortModule } from '@angular/material'
 import {GoogleMapsModule} from '@angular/google-maps'
-
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { GoogleChartsModule } from 'angular-google-charts';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +37,8 @@ import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.component';
+import { DiscollectorsComponent } from './discollectors/discollectors.component';
+import { DisdriversComponent } from './disdrivers/disdrivers.component';
 
 
 @NgModule({
@@ -72,6 +74,12 @@ import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.componen
 
     ManagerNavbarComponent,
 
+
+    DiscollectorsComponent,
+
+
+    DisdriversComponent,
+
    
 
   ],
@@ -98,7 +106,11 @@ import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.componen
     GoogleMapsModule,
      //MatTab,
      MatTabsModule,
-    GoogleChartsModule
+    GoogleChartsModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
+  
    
   ],
   schemas: [

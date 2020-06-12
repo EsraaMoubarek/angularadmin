@@ -16,6 +16,8 @@ import { CompanyComponent } from './company/company.component';
 import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 
 import { FeedbackComponent} from '../app/feedback/feedback.component';
+import { DiscollectorsComponent } from './discollectors/discollectors.component';
+import { DisdriversComponent } from './disdrivers/disdrivers.component';
 
 
 const routes: Routes = [
@@ -27,6 +29,15 @@ const routes: Routes = [
     path: 'promonly',
     component: AddPromOnlyComponent,
   },
+  {
+    path: 'discol',
+    component: DiscollectorsComponent,
+  },
+  {
+    path: 'disdriv',
+    component: DisdriversComponent,
+  },
+  
   {
     path: 'addcomp',
     component: CompanyComponent,

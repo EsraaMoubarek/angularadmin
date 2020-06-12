@@ -1,10 +1,10 @@
 export class User {
 
     Email:string;
-    PhoneNumber:string;
+    phoneNumber:string;
     userName:string;
     Password:string;
-    Id:string;
+    id:string;
     EmailConfirmed:string;
     RoleId:string;
 
