@@ -1,0 +1,22 @@
+<!-- <mat-dialog-content> -->
+<div class="container">
+    <app-manager-navbar></app-manager-navbar>
+
+    <mat-toolbar color="accent" style="background-color:rgb(41, 148, 77);">
+
+        Map
+    </mat-toolbar>
+    <br>
+    <!-- <div class="container"> -->
+        <google-map width="1110" height="580" [center]="position" [zoom]="12">
+            <map-marker [position]="mr1.position" [label]="mr1.label" title="{{mr1.title}}">
+            </map-marker>
+            <map-marker [position]="mr2.position" [label]="mr2.label" title="{{mr2.title}}">
+            </map-marker>
+        </google-map>
+    <!-- </div> -->
+</div>
+<!-- </mat-dialog-content>   -->
+<!-- <mat-dialog-actions align="center">  
+    <button class="mat-raised-button btn btn-danger" (click)="close()">Close</button>  
+</mat-dialog-actions> -->

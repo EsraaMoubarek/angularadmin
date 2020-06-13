@@ -27,6 +27,11 @@ export class ManagerNavbarComponent implements OnInit {
         label: 'Drivers',
         link: '/disdriv',
         index: 2
+      },
+      {
+        label: 'Regions',
+        link: '/disregs',
+        index: 3
       }
     ];
   }

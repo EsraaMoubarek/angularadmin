@@ -18,6 +18,8 @@ import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 import { FeedbackComponent} from '../app/feedback/feedback.component';
 import { DiscollectorsComponent } from './discollectors/discollectors.component';
 import { DisdriversComponent } from './disdrivers/disdrivers.component';
+import { DisregionsComponent } from './disregions/disregions.component';
+import { DismapComponent } from './dismap/dismap.component';
 
 
 const routes: Routes = [
@@ -54,6 +56,14 @@ const routes: Routes = [
 {
   path: 'Homelogin',
   component: HomeloginComponent,
+},
+{
+  path: 'disregs',
+  component: DisregionsComponent,
+},
+{
+  path: 'dismaps',
+  component: DismapComponent,
 },
   {
     path: 'Home',

@@ -7,6 +7,7 @@ import {
   MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, MatCardModule, MatSidenavModule,MatFormFieldModule,  
   MatInputModule, MatTooltipModule  
 } from '@angular/material';  
+import { MatDialogModule,MAT_DIALOG_DATA,MatDialogRef} from '@angular/material/dialog'
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
  import{MatTableModule,MatSortModule } from '@angular/material'
@@ -29,6 +30,10 @@ import { EditWastePriceComponent } from './edit-waste-price/edit-waste-price.com
 import { ManagerHomeComponent } from './manager-home/manager-home.component';
 
 import {MatTabsModule} from '@angular/material/tabs'
+//import { MatInputModule } from '@angular/material/input';  
+//import { MatDialogModule} from '@angular/material/dialog'  
+import { MatCheckboxModule } from '@angular/material/checkbox';  
+import { MatSelectModule } from '@angular/material/select'; 
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
@@ -39,6 +44,8 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.component';
 import { DiscollectorsComponent } from './discollectors/discollectors.component';
 import { DisdriversComponent } from './disdrivers/disdrivers.component';
+import { DisregionsComponent } from './disregions/disregions.component';
+import { DismapComponent } from './dismap/dismap.component';
 
 
 @NgModule({
@@ -80,6 +87,12 @@ import { DisdriversComponent } from './disdrivers/disdrivers.component';
 
     DisdriversComponent,
 
+
+    DisregionsComponent,
+
+
+    DismapComponent,
+
    
 
   ],
@@ -109,8 +122,13 @@ import { DisdriversComponent } from './disdrivers/disdrivers.component';
     GoogleChartsModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
-  
+    MatDialogModule,
+    MatPaginatorModule,
+    MatCheckboxModule,
+    MatSelectModule,
+     //MatDialogRef,
+    // MAT_DIALOG_DATA
+     
    
   ],
   schemas: [

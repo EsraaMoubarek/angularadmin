@@ -16,31 +16,36 @@ export class AdminNavbarComponent implements OnInit {
   constructor(private router: Router) {
     this.navLinks = [
       {
+        label: 'Home',
+        link: '/Home',
+        index: 0
+      },
+      {
         label: 'Schedule',
         link: '/Schedule',
-        index: 0
+        index: 1
       }, {
         label: 'Add Driver',
         link: '/adddriver',
-        index: 1
+        index: 2
       }, {
         label: 'Add Collector',
         link: '/addcol',
-        index: 2
+        index: 3
       }, {
         label: 'Promotions Company',
         link: '/addcomp',
-        index: 3
+        index: 4
       },
       {
         label: 'Waste Prices',
         link: '/Waste',
-        index: 4
+        index: 5
       },
       {
         label: 'FeedBacks',
         link: '/feedback',
-        index: 5
+        index: 6
       },
     ];
   }
