@@ -92,6 +92,7 @@ const routes: Routes = [
   component: ScheduleComponent,
 },{
   path: 'Survey',
+  
   component: AddSurveyComponent,
 },
 {

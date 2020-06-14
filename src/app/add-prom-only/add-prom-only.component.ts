@@ -51,9 +51,12 @@ export class AddPromOnlyComponent implements OnInit {
     //console.log(a);
     //this.newprom.CompanyId=a.id;
     //alert(a.name+" added sucessfully");
+    console.log(this.newprom);
     this.promservice.createPromotion(this.newprom).subscribe(b => {
       
-      this.uploadFile(b.id);
+      if(this.image){
+        this.uploadFile(b.id);
+      }
       alert(b.name + " added sucessfully");
       ///
       console.log(b.id);
@@ -103,7 +106,7 @@ export class AddPromOnlyComponent implements OnInit {
     }
     validateFile(name: String) {
       var ext = name.substring(name.lastIndexOf('.') + 1);
-      if (ext.toLowerCase() == 'png ' || ext.toLowerCase() =='jpg' || ext.toLowerCase() =='jpeg' ) {
+      if (ext.toLowerCase() == 'png' || ext.toLowerCase() =='jpg' || ext.toLowerCase() =='jpeg' ) {
           return true;
       }
       else {

@@ -4,10 +4,12 @@ import { ScheduleService } from './schedule.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {  
-  MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, MatCardModule, MatSidenavModule,MatFormFieldModule,  
-  MatInputModule, MatTooltipModule, MatProgressSpinnerModule, MatTabsModule, MatDividerModule, 
+  MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, MatCardModule, MatSidenavModule,  
+  MatInputModule, MatTooltipModule, MatProgressSpinnerModule, MatTabsModule, MatDividerModule,
     
 } from '@angular/material';  
+
+//import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
@@ -34,7 +36,6 @@ import {MatTabsModule} from '@angular/material/tabs' */
 //import { MatInputModule } from '@angular/material/input';  
 //import { MatDialogModule} from '@angular/material/dialog'  
 import { MatCheckboxModule } from '@angular/material/checkbox';  
-
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
@@ -134,7 +135,7 @@ import { DismapComponent } from './dismap/dismap.component';
     MatRadioModule,  
     MatCardModule,  
     MatSidenavModule,  
-    MatFormFieldModule,  
+   // MatFormFieldModule,  
     MatInputModule,  
     MatTooltipModule,  
     MatToolbarModule,  
@@ -151,7 +152,6 @@ import { DismapComponent } from './dismap/dismap.component';
     BrowserAnimationsModule,
     MatDialogModule,
     MatTableModule,
-    MatFormFieldModule,
     MatInputModule,
     MatPaginatorModule,
     MatSelectModule,

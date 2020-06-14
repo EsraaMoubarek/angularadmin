@@ -52,7 +52,9 @@ export class CompanyComponent implements OnInit {
       alert(a.name+" added sucessfully");
      this.promservice.createPromotion(this.newprom).subscribe(b=>{
        console.log(b);
-      this.uploadFile(b.id);
+      if(this.image){
+        this.uploadFile(b.id);
+      }
       alert(b.name+" added sucessfully");
       console.log(b.id);
       console.log(this.ncode);
@@ -100,7 +102,7 @@ export class CompanyComponent implements OnInit {
     }
     validateFile(name: String) {
       var ext = name.substring(name.lastIndexOf('.') + 1);
-      if (ext.toLowerCase() == 'png ' || ext.toLowerCase() =='jpg' || ext.toLowerCase() =='jpeg' ) {
+      if (ext.toLowerCase() == 'png' || ext.toLowerCase() =='jpg' || ext.toLowerCase() =='jpeg' ) {
           return true;
       }
       else {

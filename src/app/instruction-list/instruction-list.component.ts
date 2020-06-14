@@ -55,6 +55,7 @@ export class InstructionListComponent implements OnInit {
   public createImgPath = (image:string) => {
 
     return "http://localhost:" +this.port.port+"/Resources/Images/"+image;
+    
   }
   Edit(instruction){
 
