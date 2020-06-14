@@ -24,14 +24,11 @@ export class HomeComponent implements OnInit {
     lng: 29.918739
   };
 
-<<<<<<< HEAD
   label={
     color:'white',
     text:'alexandria'
   };
-  constructor(private todaySchServ:TodayScheduleService,public dialog:MatDialog) {
-
-  }
+  constructor(private todaySchServ:TodayScheduleService,public dialog:MatDialog) { }
 markr(i:number):void{
   this.position.lng=this.todyScheds[i].lng;
   this.position.lat=this.todyScheds[i].lat;
@@ -45,13 +42,8 @@ createSurvey(){
   //   width: '600px',
    });
 }
-=======
-  
-  constructor(private todaySchServ:TodayScheduleService) {
-     
-  }
+ 
 
->>>>>>> 51889146068927b1a07687de8a9987239af324cf
   ngOnInit(): void {
     this.todaySchServ.getTodaySchedule().subscribe(d=>{
       this.todyScheds=d;
