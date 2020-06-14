@@ -91,8 +91,21 @@ export class CompanyComponent implements OnInit {
     imageUpload(e) {
       this.progress =0;
       this.message = null;
+      if (!this.validateFile(e.target.files[0].name)) {
+        alert('Selected file format is not supported');
+        return false;
+      }
+      
       this.image = e.target.files[0];
     }
-
+    validateFile(name: String) {
+      var ext = name.substring(name.lastIndexOf('.') + 1);
+      if (ext.toLowerCase() == 'png ' || ext.toLowerCase() =='jpg' || ext.toLowerCase() =='jpeg' ) {
+          return true;
+      }
+      else {
+          return false;
+      }
+    }
 
 }
