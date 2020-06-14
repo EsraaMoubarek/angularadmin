@@ -52,6 +52,11 @@ export class AdminNavbarComponent implements OnInit {
         link: '/AddInstructions',
         index: 7
       },
+      {
+        label: 'Survay',
+        link: '/#',
+        index: 7
+      },
     ];
   }
 
