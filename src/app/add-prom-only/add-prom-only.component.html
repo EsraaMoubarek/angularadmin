@@ -153,13 +153,14 @@
         <br>
         <!-- /// -->
         <div class="row">
+
             <div class="col-sm-2">
                 <button class="btn-success " style="width:80px;height:40px;" (click)="savecomp()">Add</button>
             </div>
             <div class="col-sm-8">
-            <!-- image -->
+                <!-- image -->
                 <div class="row" style="margin-bottom:15px;"  >
-                    <div class="col-md-3">
+                    <div class="col-md-4" >
                     <input type="file" #file placeholder="Choose file"  
                     style="display:none;" (change)="imageUpload($event)">
                     <button type="button" class="btn btn-success" (click)="file.click()">Upload Image</button>
@@ -174,11 +175,9 @@
                     </span>
                     </div>
                 </div>
-            <!--  -->
+                <!--  -->
             </div>
         </div>
        
-
-        
     </div>
 </div>
