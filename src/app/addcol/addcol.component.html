@@ -1,7 +1,5 @@
-<div class="container">
 
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
@@ -42,57 +40,65 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
-            <!-- //// -->
-    
-    
+            </nav> --> 
+    <!-- //// -->
+    <app-admin-navbar></app-admin-navbar>
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <h3 style="color:rgb(47, 158, 37);">Add a New Collector </h3>
+    <div class="row">
+            <div class='col-sm-2'>
+        <label>Collector Name</label>
         </div>
-    
-    
-    
-    
-    
-    
-    
-        <div class="container">
-            <h3 style="color:rgb(47, 158, 37);">Add a New Collector </h3>
-            <div class="row">
-                <label>Collector Name</label>
-                <div class='col-sm-6'>
-                    <input type='text' class="form-control" [(ngModel)]="newcollector.userName" />
-                </div>
-    
-            </div>
-            <br>
-            <!-- /// -->
-            <div class="row">
-                <label>Email</label>
-                <div class='col-sm-6'>
-                    <input type='text' class="form-control" [(ngModel)]="newcollector.Email" />
-                </div>
-    
-            </div>
-            <br>
-            <!-- /// -->
-            <div class="row">
-                <label>Phone Number</label>
-                <div class='col-sm-6'>
-                    <input type='text' class="form-control" [(ngModel)]="newcollector.PhoneNumber" />
-                </div>
-    
-            </div>
-            <br>
-            <!-- /// -->
-            <div class="row">
-                <label>Password</label>
-                <div class='col-sm-6'>
-                    <input type='password' class="form-control" [(ngModel)]="newcollector.Password" />
-                </div>
-    
-            </div>
-            <br>
-            <!-- /// -->
-            <button class="btn-success " style="width:80px;height:40px;" (click)="savecol()">Add</button>
-    
+        <div class='col-sm-6'>
+            <input type='text' class="form-control" [(ngModel)]="newcollector.userName" />
         </div>
+
     </div>
+    <br>
+    <!-- /// -->
+    <div class="row">
+            <div class='col-sm-2'>
+        <label>Email</label>
+        </div>
+        <div class='col-sm-6'>
+            <input type='text' class="form-control" [(ngModel)]="newcollector.Email" />
+        </div>
+
+    </div>
+    <br>
+    <!-- /// -->
+    <div class="row">
+        <div class='col-sm-2'>
+        <label>Phone Number</label>
+    </div>
+        <div class='col-sm-6'>
+            <input type='text' class="form-control" [(ngModel)]="newcollector.phoneNumber" />
+        </div>
+
+    </div>
+    <br>
+    <!-- /// -->
+    <div class="row">
+            <div class='col-sm-2'>
+        <label>Password</label>
+        </div>
+        <div class='col-sm-6'>
+            <input type='password' class="form-control" [(ngModel)]="newcollector.Password" />
+        </div>
+
+    </div>
+    <br>
+    <!-- /// -->
+    <button class="btn-success " style="width:80px;height:40px;" (click)="savecol()">Add</button>
+
+</div>

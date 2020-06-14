@@ -1,7 +1,4 @@
-<div class="container">
-
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+<!--  <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
@@ -43,7 +40,12 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+
+    <div class="container">
+
         <!-- //// -->
         <ul class="nav nav-tabs">
             <li class="nav-item">
@@ -70,8 +72,8 @@
 
                     <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> -->
                     <option [value]="item.id" *ngFor="let item of comps">{{item.name}}</option>
-                  </select>
-      
+                </select>
+
             </div>
 
         </div>
@@ -141,13 +143,13 @@
                 <label>Details</label>
             </div>
             <div class='col-sm-4'>
-                <textarea type='text' class="form-control" [(ngModel)]="newprom.Details" ></textarea>
+                <textarea type='text' class="form-control" [(ngModel)]="newprom.Details"></textarea>
             </div>
 
         </div>
 
 
-        
+
         <br>
         <!-- /// -->
         <div class="row">
