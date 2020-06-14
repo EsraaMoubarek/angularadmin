@@ -5,12 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {  
   MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, MatCardModule, MatSidenavModule,MatFormFieldModule,  
-<<<<<<< HEAD
-  MatInputModule, MatTooltipModule, MatToolbarModule,MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS, ShowOnDirtyErrorStateMatcher, ErrorStateMatcher  
-=======
   MatInputModule, MatTooltipModule, MatProgressSpinnerModule, MatTabsModule, MatDividerModule, 
     
->>>>>>> 51889146068927b1a07687de8a9987239af324cf
 } from '@angular/material';  
 
 import { MatRadioModule } from '@angular/material/radio';  
@@ -42,12 +38,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
-<<<<<<< HEAD
-import { AddSurveyComponent } from './add-survey/add-survey.component';
-import { SurveyComponent } from './survey/survey.component';
-import { SurveyQuestionsComponent } from './survey-questions/survey-questions.component';
-import { QuestionComponent } from './question/question.component';
-=======
 import { CompanyComponent } from './company/company.component';
 import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 import { FeedbackComponent } from './feedback/feedback.component';
@@ -73,7 +63,6 @@ import { DiscollectorsComponent } from './discollectors/discollectors.component'
 import { DisdriversComponent } from './disdrivers/disdrivers.component';
 import { DisregionsComponent } from './disregions/disregions.component';
 import { DismapComponent } from './dismap/dismap.component';
->>>>>>> 51889146068927b1a07687de8a9987239af324cf
 
 
 @NgModule({
@@ -97,18 +86,6 @@ import { DismapComponent } from './dismap/dismap.component';
     BarTypClntRgnComponent,
 
 
-<<<<<<< HEAD
-    AddSurveyComponent,
-
-
-    SurveyComponent,
-
-
-    SurveyQuestionsComponent,
-
-
-    QuestionComponent,
-=======
     CompanyComponent,
 
 
@@ -134,7 +111,6 @@ import { DismapComponent } from './dismap/dismap.component';
 
 
     DismapComponent,
->>>>>>> 51889146068927b1a07687de8a9987239af324cf
 
    
 
@@ -160,8 +136,8 @@ import { DismapComponent } from './dismap/dismap.component';
     MatSidenavModule,  
     MatFormFieldModule,  
     MatInputModule,  
-    MatTooltipModule,
-    MatToolbarModule,MatDialogModule,  
+    MatTooltipModule,  
+    MatToolbarModule,  
     AppRoutingModule,
     //MatTabGroup,    
     GoogleMapsModule,
@@ -210,21 +186,11 @@ import { DismapComponent } from './dismap/dismap.component';
      
    
   ],
-  entryComponents: [
-    AddSurveyComponent
-  ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
   
   ],
-<<<<<<< HEAD
-  providers: [HttpClientModule,ScheduleService,MatDatepickerModule,
-    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
-    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
-  ],
-=======
   providers: [HttpClientModule,ScheduleService,MatDatepickerModule,InstructionService],
->>>>>>> 51889146068927b1a07687de8a9987239af324cf
   bootstrap: [AppComponent]
 
 })

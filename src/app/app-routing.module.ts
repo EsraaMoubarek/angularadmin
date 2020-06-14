@@ -12,11 +12,13 @@ import {WastepriceComponent} from '../app/wasteprice/wasteprice.component'
 import {EditWastePriceComponent} from '../app/edit-waste-price/edit-waste-price.component'
 
 import {ManagerHomeComponent} from '../app/manager-home/manager-home.component'
-<<<<<<< HEAD
+//<<<<<<< HEAD
 import {AddSurveyComponent} from '../app/add-survey/add-survey.component'
 import {QuestionComponent} from '../app/question/question.component'
-//>>>>>>> 8356c9f3295a7ac1869c2b1f8e4f83810bca0ac6
-=======
+////>>>>>>> 8356c9f3295a7ac1869c2b1f8e4f83810bca0ac6
+import { SurveyComponent } from './survey/survey.component';
+import { SurveyQuestionsComponent } from './survey-questions/survey-questions.component';
+
 import { CompanyComponent } from './company/company.component';
 import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 
@@ -29,7 +31,7 @@ import { DisregionsComponent } from './disregions/disregions.component';
 import { DismapComponent } from './dismap/dismap.component';
 
 
->>>>>>> 51889146068927b1a07687de8a9987239af324cf
+//>>>>>>> 51889146068927b1a07687de8a9987239af324cf
 const routes: Routes = [
   {
     path: 'login',
@@ -106,13 +108,14 @@ const routes: Routes = [
   component: ManagerHomeComponent,
 },
 {
-<<<<<<< HEAD
+//<<<<<<< HEAD
   path: "Ques",
   component: QuestionComponent,
-=======
+},
+{
   path: 'feedback',
   component:  FeedbackComponent,
->>>>>>> 51889146068927b1a07687de8a9987239af324cf
+//>>>>>>> 51889146068927b1a07687de8a9987239af324cf
 },
 { 
   path: '',
