@@ -14,6 +14,8 @@ import {EditWastePriceComponent} from '../app/edit-waste-price/edit-waste-price.
 //>>>>>>> 7d62aa389dd3a61456e18956bdb36c42877dbbd0
 //=======
 import {ManagerHomeComponent} from '../app/manager-home/manager-home.component'
+import {AddSurveyComponent} from '../app/add-survey/add-survey.component'
+import {QuestionComponent} from '../app/question/question.component'
 //>>>>>>> 8356c9f3295a7ac1869c2b1f8e4f83810bca0ac6
 const routes: Routes = [
   {
@@ -40,6 +42,9 @@ const routes: Routes = [
 {
   path: 'Schedule',
   component: ScheduleComponent,
+},{
+  path: 'Survey',
+  component: AddSurveyComponent,
 },
 {
   path: 'Waste',
@@ -53,6 +58,10 @@ const routes: Routes = [
 {
   path: 'Manager',
   component: ManagerHomeComponent,
+},
+{
+  path: "Ques",
+  component: QuestionComponent,
 },
 { 
   path: '',

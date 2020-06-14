@@ -1,0 +1,128 @@
+<!-- <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body> -->
+<a  class="btn btn-success "  [routerLink]="['/Ques']">
+  <span class="glyphicon glyphicon-plus"></span> Plus 
+</a>
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/Ques">Home</a>
+  </li>
+</ul>
+<div class="container" *ngFor="let p of ss;let i=index">
+  <div class="row" >
+    <div class="col-lg-4">
+    </div>
+    <div class="col-lg-4">
+     <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Question1</mat-label>
+            <input matInput placeholder="Placeholder" [(ngModel)]="ss[i].Question">  
+        </mat-form-field>
+       </p>
+    </div>
+  </div>
+    <div class="row">
+     <div class="col-lg-2">
+     </div>
+      <div class="col-lg-3">
+       <mat-form-field appearance="standard">
+         <mat-label>Choice1</mat-label>
+         <input matInput placeholder="Placeholder" [(ngModel)]="survQues1.ChoiceA">
+       </mat-form-field>
+      </div>
+      <div class="col-lg-3">
+       <mat-form-field appearance="standard">
+         <mat-label>Choice2</mat-label>
+         <input matInput placeholder="Placeholder" [(ngModel)]="survQues1.ChoiceB">
+     </mat-form-field>
+     </div>
+     <div class="col-lg-3">
+      
+       <mat-form-field appearance="standard">
+         <mat-label>Choice3</mat-label>
+         <input matInput placeholder="Placeholder" [(ngModel)]="survQues1.ChoiceC">
+       </mat-form-field>
+    </div>
+  </div> 
+  <!-- *********2********** -->
+
+<div class="row" >
+  <div class="col-lg-4">
+  </div>
+  <div class="col-lg-4">
+   <p>
+      <mat-form-field appearance="fill">
+          <mat-label>Question2</mat-label>
+          <input matInput placeholder="Placeholder" [(ngModel)]="survQues2.Question">  
+      </mat-form-field>
+     </p>
+  </div>
+</div>
+  <div class="row">
+   <div class="col-lg-2">
+   </div>
+    <div class="col-lg-3">
+     <mat-form-field appearance="standard">
+       <mat-label>Choice1</mat-label>
+       <input matInput placeholder="Placeholder" [(ngModel)]="survQues2.ChoiceA">
+     </mat-form-field>
+    </div>
+    <div class="col-lg-3">
+     <mat-form-field appearance="standard">
+       <mat-label>Choice2</mat-label>
+       <input matInput placeholder="Placeholder" [(ngModel)]="survQues2.ChoiceB">
+   </mat-form-field>
+   </div>
+   <div class="col-lg-3">
+    
+     <mat-form-field appearance="standard">
+       <mat-label>Choice3</mat-label>
+       <input matInput placeholder="Placeholder" [(ngModel)]="survQues2.ChoiceC">
+     </mat-form-field>
+  </div>
+</div> 
+<!-- *********3********** -->
+<div class="row" id="q">
+  <div class="col-lg-4">
+  </div>
+  <div class="col-lg-4">
+   <p>
+      <mat-form-field appearance="fill">
+          <mat-label>Question3</mat-label>
+          <input matInput placeholder="Placeholder" color="acent" [(ngModel)]="survQues3.Question">  
+      </mat-form-field>
+     </p>
+  </div>
+</div>
+  <div class="row">
+   <div class="col-lg-2">
+   </div>
+    <div class="col-lg-3">
+     <mat-form-field appearance="standard">
+       <mat-label>Choice1</mat-label>
+       <input matInput placeholder="Placeholder" [(ngModel)]="survQues3.ChoiceA">
+     </mat-form-field>
+    </div>
+    <div class="col-lg-3">
+     <mat-form-field appearance="standard">
+       <mat-label>Choice2</mat-label>
+       <input matInput placeholder="Placeholder" [(ngModel)]="survQues3.ChoiceB">
+   </mat-form-field>
+   </div>
+   <div class="col-lg-3">
+       <mat-form-field appearance="standard">
+       <mat-label>Choice3</mat-label>
+       <input matInput placeholder="Placeholder" [(ngModel)]="survQues3.ChoiceC">
+     </mat-form-field>
+  </div>
+</div>
+</div>
+
+
+
+<a class="btn btn-success" (click)="fillSurveyArray()">Save</a>
