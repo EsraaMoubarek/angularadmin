@@ -34,12 +34,11 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-<<<<<<< HEAD
+
               
         "node_modules/bootstrap/dist/js/bootstrap.min.js"
-=======
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
->>>>>>> 51889146068927b1a07687de8a9987239af324cf
+
+             
             ]
           },
           "configurations": {
