@@ -16,15 +16,12 @@ import { CompanyComponent } from './company/company.component';
 import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 
 import { FeedbackComponent} from '../app/feedback/feedback.component';
-<<<<<<< HEAD
 import { AddInstructionComponent } from './add-instruction/add-instruction.component';
 import { InstructionListComponent } from './instruction-list/instruction-list.component';
-=======
 import { DiscollectorsComponent } from './discollectors/discollectors.component';
 import { DisdriversComponent } from './disdrivers/disdrivers.component';
 import { DisregionsComponent } from './disregions/disregions.component';
 import { DismapComponent } from './dismap/dismap.component';
->>>>>>> fd55926d8bb533a00b4947b6d79c349cd3fc068d
 
 
 const routes: Routes = [

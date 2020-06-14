@@ -47,6 +47,11 @@ export class AdminNavbarComponent implements OnInit {
         link: '/feedback',
         index: 6
       },
+      {
+        label: 'Instructions',
+        link: '/AddInstructions',
+        index: 7
+      },
     ];
   }
 

@@ -5,21 +5,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {  
   MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, MatCardModule, MatSidenavModule,MatFormFieldModule,  
-<<<<<<< HEAD
-  MatInputModule, MatTooltipModule, MatToolbarModule, MatProgressSpinnerModule, MatTabsModule, MatDividerModule,   
+  MatInputModule, MatTooltipModule, MatProgressSpinnerModule, MatTabsModule, MatDividerModule, 
+    
 } from '@angular/material';  
 
-=======
-  MatInputModule, MatTooltipModule  
-} from '@angular/material';  
-import { MatDialogModule,MAT_DIALOG_DATA,MatDialogRef} from '@angular/material/dialog'
->>>>>>> fd55926d8bb533a00b4947b6d79c349cd3fc068d
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
- import{MatTableModule,MatSortModule } from '@angular/material'
+/*  import{MatTableModule,MatSortModule } from '@angular/material' */ /* commented confilct */
 import {GoogleMapsModule} from '@angular/google-maps'
-import {MatPaginatorModule} from '@angular/material/paginator';
-import { GoogleChartsModule } from 'angular-google-charts';
+/* import {MatPaginatorModule} from '@angular/material/paginator';
+ */import { GoogleChartsModule } from 'angular-google-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,15 +29,12 @@ import { AddcolComponent } from './addcol/addcol.component';
 import { WastepriceComponent } from './wasteprice/wasteprice.component';
 import { EditWastePriceComponent } from './edit-waste-price/edit-waste-price.component';
 import { ManagerHomeComponent } from './manager-home/manager-home.component';
-
-<<<<<<< HEAD
-=======
-import {MatTabsModule} from '@angular/material/tabs'
+/* 
+import {MatTabsModule} from '@angular/material/tabs' */
 //import { MatInputModule } from '@angular/material/input';  
 //import { MatDialogModule} from '@angular/material/dialog'  
 import { MatCheckboxModule } from '@angular/material/checkbox';  
-import { MatSelectModule } from '@angular/material/select'; 
->>>>>>> fd55926d8bb533a00b4947b6d79c349cd3fc068d
+
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
@@ -51,7 +43,6 @@ import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.component';
-<<<<<<< HEAD
 import { AddInstructionComponent } from './add-instruction/add-instruction.component';
 import { InstructionListComponent } from './instruction-list/instruction-list.component';
 import {MatTableModule} from '@angular/material/table';
@@ -59,7 +50,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatSelectModule} from '@angular/material/select';
 import { DialogComponent } from './dialog/dialog.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule,MAT_DIALOG_DATA,MatDialogRef} from '@angular/material/dialog'
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { InstructionService } from './_services/instruction.service';
@@ -68,12 +59,10 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { NotifyDialogBoxComponent } from './notify-dialog-box/notify-dialog-box.component';
 
 
-=======
 import { DiscollectorsComponent } from './discollectors/discollectors.component';
 import { DisdriversComponent } from './disdrivers/disdrivers.component';
 import { DisregionsComponent } from './disregions/disregions.component';
 import { DismapComponent } from './dismap/dismap.component';
->>>>>>> fd55926d8bb533a00b4947b6d79c349cd3fc068d
 
 
 @NgModule({
@@ -111,8 +100,6 @@ import { DismapComponent } from './dismap/dismap.component';
 
     ManagerNavbarComponent,
 
-<<<<<<< HEAD
-=======
 
     DiscollectorsComponent,
 
@@ -126,7 +113,6 @@ import { DismapComponent } from './dismap/dismap.component';
     DismapComponent,
 
    
->>>>>>> fd55926d8bb533a00b4947b6d79c349cd3fc068d
 
     AddInstructionComponent,
     InstructionListComponent,
@@ -155,7 +141,6 @@ import { DismapComponent } from './dismap/dismap.component';
     AppRoutingModule,
     //MatTabGroup,    
     GoogleMapsModule,
-<<<<<<< HEAD
 
     GoogleChartsModule,
     MatTableModule,
@@ -187,7 +172,6 @@ import { DismapComponent } from './dismap/dismap.component';
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-=======
      //MatTab,
      MatTabsModule,
     GoogleChartsModule,
@@ -201,7 +185,6 @@ import { DismapComponent } from './dismap/dismap.component';
     // MAT_DIALOG_DATA
      
    
->>>>>>> fd55926d8bb533a00b4947b6d79c349cd3fc068d
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
