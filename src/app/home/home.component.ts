@@ -16,13 +16,15 @@ export class HomeComponent implements OnInit {
   myDate=Date.now();
 
   todyScheds:TodaySchedule[]=[];
-    
-  title = 'googleMaps';
+  markers:any[]=[]; 
+  
+ 
   position={
     lat:31.200092,
-    lng:29.918739
+    lng: 29.918739
   };
 
+<<<<<<< HEAD
   label={
     color:'white',
     text:'alexandria'
@@ -43,11 +45,35 @@ createSurvey(){
   //   width: '600px',
    });
 }
+=======
+  
+  constructor(private todaySchServ:TodayScheduleService) {
+     
+  }
+
+>>>>>>> 51889146068927b1a07687de8a9987239af324cf
   ngOnInit(): void {
     this.todaySchServ.getTodaySchedule().subscribe(d=>{
       this.todyScheds=d;
       console.log(d);
-      
+
+
+      for(var val of this.todyScheds ){
+        let mr={
+          'title' : val.region,
+          'position':{
+               lat:val.lat,
+               lng:val.lng
+              },
+
+          'label':{
+           color:'white',
+           text:val.region
+          }
+        }
+         this.markers.push(mr);
+         console.log(this.markers);
+      }
     })
   }
 }

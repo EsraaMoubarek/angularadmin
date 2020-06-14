@@ -1,0 +1,16 @@
+.mat-tab-link{
+    /* //min-width: 25px !important;
+    //padding: 5px;
+    color: red;
+    font-weight: 700; */
+    /* text-decoration: none; */
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1em;
+
+
+}
+.mat-tab-label-active {
+    background-color: rgb(72, 110, 72);
+
+}

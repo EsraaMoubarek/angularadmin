@@ -1,0 +1,174 @@
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
+                </a>
+                <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1.5em;color: rgb(68, 167, 68)">WasteApp</p>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1em;">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/Home">Home
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/Schedule">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/adddriver">Add Driver</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/addcol">Add Collector</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/addcomp">Promotions company</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/Waste">Waste Prices</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+<!-- //// -->
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="/addcomp" style="color:rgb(47, 158, 37);">With New Company</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/promonly" style="color:rgb(47, 158, 37);">With Existing Company</a>
+        </li>
+    </ul>
+
+
+</div>
+<br>
+<div class="container">
+
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Company Name</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='text' class="form-control" [(ngModel)]="newcomp.name" />
+        </div>
+
+    </div>
+
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Promotion Name</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='text' class="form-control" [(ngModel)]="newprom.name" />
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Required Points</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='text' class="form-control" [(ngModel)]="newprom.RequiredPoints" />
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>No of Codes</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='number' class="form-control" [(ngModel)]="ncode" />
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Date From</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='date' class="form-control" [(ngModel)]="newprom.DateFrom" />
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Date To</label>
+        </div>
+        <div class='col-sm-4'>
+            <input type='date' class="form-control" [(ngModel)]="newprom.DateTo" />
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class='col-sm-2'>
+
+            <label>Details</label>
+        </div>
+        <div class='col-sm-4'>
+            <textarea type='text' class="form-control" [(ngModel)]="newprom.Details"></textarea>
+        </div>
+
+    </div>
+
+        
+        <br>
+        <div class="row">
+            <div class="col-sm-2">
+                <!-- /// -->
+                <button class="btn-success " style="width:80px;height:40px;" (click)="savecomp()">Add</button>
+
+           </div>
+            <div class="col-sm-8">
+                <!-- image -->
+                <div class="row" style="margin-bottom:15px;"  >
+                    <div class="col-md-3">
+                    <input type="file" #file placeholder="Choose file"  
+                    style="display:none;" (change)="imageUpload($event)">
+                    <button type="button" class="btn btn-success" (click)="file.click()">Upload Image</button>
+                    <span *ngIf="image">{{image.name}}</span>
+                    </div>
+                    <div class="col-md-4">
+                    <span class="upload" *ngIf="progress > 0 ">
+                        {{progress}}%
+                    </span>
+                    <span class="upload" *ngIf="message">
+                        {{message}}
+                    </span>
+                    </div>
+                </div>
+            <!--  -->
+            </div>
+        </div>
+
+
+    <br>
+    <!-- /// -->
+
+</div>
