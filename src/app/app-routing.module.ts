@@ -16,6 +16,8 @@ import { CompanyComponent } from './company/company.component';
 import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 
 import { FeedbackComponent} from '../app/feedback/feedback.component';
+import { AddInstructionComponent } from './add-instruction/add-instruction.component';
+import { InstructionListComponent } from './instruction-list/instruction-list.component';
 
 
 const routes: Routes = [
@@ -30,6 +32,14 @@ const routes: Routes = [
   {
     path: 'addcomp',
     component: CompanyComponent,
+  },
+  {
+    path: 'AddInstructions',
+    component: AddInstructionComponent,
+  },
+  {
+    path: 'InstructionsList',
+    component: InstructionListComponent,
   },
   {
     path: 'adddriver',

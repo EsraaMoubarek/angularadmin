@@ -85,9 +85,12 @@
             <div class='col-sm-4'>
                 <input type='text' class="form-control" [(ngModel)]="newprom.name" />
             </div>
-
+            <div class="col">
+                
+            </div>
         </div>
         <br>
+
         <div class="row">
             <div class='col-sm-2'>
 
@@ -147,7 +150,33 @@
         
         <br>
         <!-- /// -->
-        <button class="btn-success " style="width:80px;height:40px;" (click)="savecomp()">Add</button>
+        <div class="row">
+            <div class="col-sm-2">
+                <button class="btn-success " style="width:80px;height:40px;" (click)="savecomp()">Add</button>
+            </div>
+            <div class="col-sm-8">
+            <!-- image -->
+                <div class="row" style="margin-bottom:15px;"  >
+                    <div class="col-md-3">
+                    <input type="file" #file placeholder="Choose file"  
+                    style="display:none;" (change)="imageUpload($event)">
+                    <button type="button" class="btn btn-success" (click)="file.click()">Upload Image</button>
+                    <span *ngIf="image">{{image.name}}</span>
+                    </div>
+                    <div class="col-md-4">
+                    <span class="upload" *ngIf="progress > 0 ">
+                        {{progress}}%
+                    </span>
+                    <span class="upload" *ngIf="message">
+                        {{message}}
+                    </span>
+                    </div>
+                </div>
+            <!--  -->
+            </div>
+        </div>
+       
 
+        
     </div>
 </div>

@@ -7,6 +7,7 @@ import { Promotion } from '../_models/promotion';
 import { AddPromotionService } from '../_services/add-promotion.service';
 import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/abstract_emitter';
 import { Promcode } from '../_models/promcode';
+import { HttpEventType } from '@angular/common/http';
 
 
 @Component({
@@ -21,8 +22,12 @@ export class AddPromOnlyComponent implements OnInit {
   npromcode: Promcode = new Promcode();
 
 
+  public progress: number;
+  public message: string;
+  image: File;
 
-  constructor(private formbulider: FormBuilder, private compService: CompanyService, public router: Router, private promservice: AddPromotionService) { }
+  constructor(private formbulider: FormBuilder, private compService: CompanyService, public router: Router, 
+    private promservice: AddPromotionService) { }
 
   ngOnInit(): void {
     this.compService.getallcomp().subscribe(a => {
@@ -47,7 +52,8 @@ export class AddPromOnlyComponent implements OnInit {
     //this.newprom.CompanyId=a.id;
     //alert(a.name+" added sucessfully");
     this.promservice.createPromotion(this.newprom).subscribe(b => {
-      console.log(b);
+      
+      this.uploadFile(b.id);
       alert(b.name + " added sucessfully");
       ///
       console.log(b.id);
@@ -69,4 +75,26 @@ export class AddPromOnlyComponent implements OnInit {
     })
   }
 
+  public uploadFile = (id) => {
+  
+    let fileToUpload = <File>this.image ;
+    const formData = new FormData();
+    
+    formData.append('file', fileToUpload, fileToUpload.name);
+    
+    this.promservice.UploadPromotionsImage(formData,id).subscribe( (event)  => {
+        console.log("event",event)
+        event.type.valueOf
+        if (event.type === HttpEventType.UploadProgress)
+          this.progress = Math.round(100 * event.loaded / event.total);
+        else if (event.type === HttpEventType.Response) {
+          this.message = 'Upload success.';
+        }
+      });
+    }
+    imageUpload(e) {
+      this.progress =0;
+      this.message = null;
+      this.image = e.target.files[0];
+    }
 }

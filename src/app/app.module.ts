@@ -5,8 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {  
   MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, MatCardModule, MatSidenavModule,MatFormFieldModule,  
-  MatInputModule, MatTooltipModule, MatToolbarModule  
+  MatInputModule, MatTooltipModule, MatToolbarModule, MatProgressSpinnerModule, MatTabsModule, MatDividerModule,   
 } from '@angular/material';  
+
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
@@ -28,7 +29,6 @@ import { WastepriceComponent } from './wasteprice/wasteprice.component';
 import { EditWastePriceComponent } from './edit-waste-price/edit-waste-price.component';
 import { ManagerHomeComponent } from './manager-home/manager-home.component';
 
-import {} from '@angular/material'
 
 import { BarTypClntRgnComponent } from './bar-typ-clnt-rgn/bar-typ-clnt-rgn.component';
 import { CompanyComponent } from './company/company.component';
@@ -36,9 +36,27 @@ import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.component';
+import { AddInstructionComponent } from './add-instruction/add-instruction.component';
+import { InstructionListComponent } from './instruction-list/instruction-list.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatSelectModule} from '@angular/material/select';
+import { DialogComponent } from './dialog/dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTreeModule } from '@angular/cdk/tree';
+import { InstructionService } from './_services/instruction.service';
+
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { NotifyDialogBoxComponent } from './notify-dialog-box/notify-dialog-box.component';
+
+
 
 
 @NgModule({
+  entryComponents: [DialogComponent, InstructionListComponent,NotifyDialogBoxComponent],
+
   declarations: [
     AppComponent,
     ScheduleComponent,
@@ -71,8 +89,12 @@ import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.componen
 
     ManagerNavbarComponent,
 
-   
 
+    AddInstructionComponent,
+    InstructionListComponent,
+    DialogComponent,
+    NotifyDialogBoxComponent,
+    
   ],
   imports: [
     BrowserModule,  
@@ -96,14 +118,42 @@ import { ManagerNavbarComponent } from './manager-navbar/manager-navbar.componen
 
     GoogleMapsModule,
 
-    GoogleChartsModule
-   
+    GoogleChartsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatDialogModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatSidenavModule,
+    MatProgressSpinnerModule,
+    MatDividerModule,
+    MatTabsModule,
+    MatSortModule,
+    CdkTableModule,
+    CdkTreeModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
   
   ],
-  providers: [HttpClientModule,ScheduleService,MatDatepickerModule],
+  providers: [HttpClientModule,ScheduleService,MatDatepickerModule,InstructionService],
   bootstrap: [AppComponent]
 
 })

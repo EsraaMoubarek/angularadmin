@@ -1,0 +1,62 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="px-5 pb-5">
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" routerLink="/AddInstructions">Add Instruction</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/InstructionsList">Instructions List</a>
+  </li>
+</ul>
+
+  <form #form="ngForm" autocomplete="off" [formGroup]="group"  name="form"  class="example-form mt-2  pt-3 pl-3"
+  (submit)="uploadFile()">
+
+  
+  <input type="text" #id formControlName="idControl" hidden *ngIf="instruction"> 
+
+  <mat-form-field appearance="legacy" style="width: 300px;">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="detialsControl" style="width: 300px;
+    height: 200px;" ></textarea>
+  </mat-form-field>
+  <div class="row" style="margin-bottom:15px;" *ngIf="add" >
+    <div class="col-md-3">
+      <input type="file" #file placeholder="Choose file"  formControlName="imageControl"
+       style="display:none;" (change)="imageUpload($event)">
+      <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+      <span *ngIf="image">{{image.name}}</span>
+    </div>
+    <div class="col-md-4">
+      <span class="upload" *ngIf="progress > 0 ">
+        {{progress}}%
+      </span>
+      <span class="upload" *ngIf="message">
+        {{message}}
+      </span>
+    </div>
+  </div>
+
+    <div>
+      <button type="submit" mat-raised-button class="btn btn-success mx-2" 
+      [disabled]="!form.valid " >Submit</button> 
+  
+      <button  class="btn btn-success mx-2" mat-raised-button routerLink="/Home" >Cancel</button> 
+    </div>
+</form>
+
+<!-- <div class="row" style="margin-bottom:15px;">
+    <div class="col-md-3">
+      <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+      <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+    </div>
+    <div class="col-md-4">
+      <span class="upload" *ngIf="progress > 0">
+        {{progress}}%
+      </span>
+      <span class="upload" *ngIf="message">
+        {{message}}
+      </span>
+    </div>
+  </div> -->
+</div>
