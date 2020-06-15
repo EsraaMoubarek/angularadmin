@@ -1,10 +1,10 @@
-<!-- <head>
+ <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body> --><!-- 
+<body> 
 <a  class="btn btn-success "  [routerLink]="['/Ques']">
   <span class="glyphicon glyphicon-plus"></span> Plus 
 </a>
@@ -13,115 +13,104 @@
     <a class="nav-link" routerLink="/Ques">Home</a>
   </li>
 </ul>
-<div class="container" *ngFor="let p of ss;let i=index">
-  <div class="row" >
-    <div class="col-lg-4">
-    </div>
-    <div class="col-lg-4">
-     <p>
-        <mat-form-field appearance="fill">
-            <mat-label>Question1</mat-label>
-            <input matInput placeholder="Placeholder" [(ngModel)]="ss[i].Question">  
-        </mat-form-field>
-       </p>
-    </div>
-  </div>
-    <div class="row">
-     <div class="col-lg-2">
-     </div>
-      <div class="col-lg-3">
-       <mat-form-field appearance="standard">
-         <mat-label>Choice1</mat-label>
-         <input matInput placeholder="Placeholder" [(ngModel)]="survQues1.ChoiceA">
-       </mat-form-field>
-      </div>
-      <div class="col-lg-3">
-       <mat-form-field appearance="standard">
-         <mat-label>Choice2</mat-label>
-         <input matInput placeholder="Placeholder" [(ngModel)]="survQues1.ChoiceB">
-     </mat-form-field>
-     </div>
-     <div class="col-lg-3">
-      
-       <mat-form-field appearance="standard">
-         <mat-label>Choice3</mat-label>
-         <input matInput placeholder="Placeholder" [(ngModel)]="survQues1.ChoiceC">
-       </mat-form-field>
-    </div>
-  </div>  -->
-  <!-- *********2********** -->
-<!-- 
-<div class="row" >
-  <div class="col-lg-4">
-  </div>
-  <div class="col-lg-4">
-   <p>
-      <mat-form-field appearance="fill">
-          <mat-label>Question2</mat-label>
-          <input matInput placeholder="Placeholder" [(ngModel)]="survQues2.Question">  
-      </mat-form-field>
-     </p>
-  </div>
-</div>
-  <div class="row">
-   <div class="col-lg-2">
-   </div>
-    <div class="col-lg-3">
-     <mat-form-field appearance="standard">
-       <mat-label>Choice1</mat-label>
-       <input matInput placeholder="Placeholder" [(ngModel)]="survQues2.ChoiceA">
-     </mat-form-field>
-    </div>
-    <div class="col-lg-3">
-     <mat-form-field appearance="standard">
-       <mat-label>Choice2</mat-label>
-       <input matInput placeholder="Placeholder" [(ngModel)]="survQues2.ChoiceB">
-   </mat-form-field>
-   </div>
-   <div class="col-lg-3">
+<div class="container" >
     
-     <mat-form-field appearance="standard">
-       <mat-label>Choice3</mat-label>
-       <input matInput placeholder="Placeholder" [(ngModel)]="survQues2.ChoiceC">
-     </mat-form-field>
-  </div>
-</div>  -->
-<!-- *********3********** -->
-<!-- <div class="row" id="q">
+  <!-- *********2********** -->
+
+<div class="row" *ngFor="let q of survQues;let i=index" >
   <div class="col-lg-4">
   </div>
   <div class="col-lg-4">
    <p>
-      <mat-form-field appearance="fill">
-          <mat-label>Question3</mat-label>
-          <input matInput placeholder="Placeholder" color="acent" [(ngModel)]="survQues3.Question">  
-      </mat-form-field>
+    <label for="text" class="sr-only">Password</label>
+          <input type="text" placeholder="Placeholder" [(ngModel)]="survQues[i]">  
+      
      </p>
   </div>
 </div>
+<!-- different questions -->
+<!-- 1 -->
   <div class="row">
-   <div class="col-lg-2">
+   <div class="col-lg-1">
    </div>
-    <div class="col-lg-3">
-     <mat-form-field appearance="standard">
-       <mat-label>Choice1</mat-label>
-       <input matInput placeholder="Placeholder" [(ngModel)]="survQues3.ChoiceA">
-     </mat-form-field>
+    <div class="col-lg-2">
+    <label for="text" class="sr-only">Question</label>
+       <input type="text" placeholder="Placeholder" [(ngModel)]="survQues1.Question">
     </div>
-    <div class="col-lg-3">
-     <mat-form-field appearance="standard">
-       <mat-label>Choice2</mat-label>
-       <input matInput placeholder="Placeholder" [(ngModel)]="survQues3.ChoiceB">
-   </mat-form-field>
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-2">
+      <label for="text" class="sr-only">Ans1</label>
+       <input matInput placeholder="Placeholder" [(ngModel)]="survQues1.ChoiceA">
    </div>
-   <div class="col-lg-3">
-       <mat-form-field appearance="standard">
-       <mat-label>Choice3</mat-label>
-       <input matInput placeholder="Placeholder" [(ngModel)]="survQues3.ChoiceC">
-     </mat-form-field>
+   <div class="col-lg-1">
   </div>
+  <div class="col-lg-2">
+    <label for="text" class="sr-only">Ans2</label>
+     <input matInput placeholder="Placeholder" [(ngModel)]="survQues1.ChoiceB">
+ </div>
+ <div class="col-lg-1">
 </div>
+<div class="col-lg-2">
+  <label for="text" class="sr-only">Ans3</label>
+   <input  placeholder="Placeholder" [(ngModel)]="survQues1.ChoiceC">
+</div>
+</div>  
+<!-- *********2********** -->
+<div class="row">
+  <div class="col-lg-1">
+  </div>
+   <div class="col-lg-2">
+   <label for="text" class="sr-only">Question</label>
+      <input type="text" placeholder="Placeholder" [(ngModel)]="survQues2.Question">
+   </div>
+   <div class="col-lg-1">
+   </div>
+   <div class="col-lg-2">
+     <label for="text" class="sr-only">Ans1</label>
+      <input matInput placeholder="Placeholder" [(ngModel)]="survQues2.ChoiceA">
+  </div>
+  <div class="col-lg-1">
+ </div>
+ <div class="col-lg-2">
+   <label for="text" class="sr-only">Ans2</label>
+    <input matInput placeholder="Placeholder" [(ngModel)]="survQues2.ChoiceB">
+</div>
+<div class="col-lg-1">
+</div>
+<div class="col-lg-2">
+ <label for="text" class="sr-only">Ans3</label>
+  <input  placeholder="Placeholder" [(ngModel)]="survQues2.ChoiceC">
+</div>
+</div>  
+<!-- 3 -->
+<div class="row">
+  <div class="col-lg-1">
+  </div>
+   <div class="col-lg-2">
+   <label for="text" class="sr-only">Question</label>
+      <input type="text" placeholder="Placeholder" [(ngModel)]="survQues3.Question">
+   </div>
+   <div class="col-lg-1">
+   </div>
+   <div class="col-lg-2">
+     <label for="text" class="sr-only">Ans1</label>
+      <input matInput placeholder="Placeholder" [(ngModel)]="survQues3.ChoiceA">
+  </div>
+  <div class="col-lg-1">
+ </div>
+ <div class="col-lg-2">
+   <label for="text" class="sr-only">Ans2</label>
+    <input matInput placeholder="Placeholder" [(ngModel)]="survQues3.ChoiceB">
+</div>
+<div class="col-lg-1">
+</div>
+<div class="col-lg-2">
+ <label for="text" class="sr-only">Ans3</label>
+  <input  placeholder="Placeholder" [(ngModel)]="survQues3.ChoiceC">
+</div>
+</div>  
 </div>
 
 <a class="btn btn-success" (click)="fillSurveyArray()">Save</a>
- -->
+ 

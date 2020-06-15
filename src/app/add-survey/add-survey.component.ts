@@ -14,10 +14,10 @@ export class AddSurveyComponent implements OnInit {
 public ss = new Array<SurveyQuestions>(3);
 //public survQues:SurveyQuestions[]=new SurveyQuestions() [3] //not good 
 //survQues:Array<SurveyQuestions> = []
- survQues:SurveyQuestions[]=[]
-survQues1:SurveyQuestions=new SurveyQuestions()
-survQues2:SurveyQuestions=new SurveyQuestions()
-survQues3:SurveyQuestions=new SurveyQuestions()
+ survQues=new Array<string>(4);
+ survQues1:SurveyQuestions=new SurveyQuestions()
+ survQues2:SurveyQuestions=new SurveyQuestions()
+ survQues3:SurveyQuestions=new SurveyQuestions()
 
 add(){
 
@@ -29,11 +29,11 @@ add(){
   //  router.navigate([{outlets: {primary: '/Ques' ,moreQues: '/Ques'}}]);
   console.log(this.survQues)}
   fillSurveyArray(){
-    this.survQues.push(this.survQues1)
-    this.survQues.push(this.survQues2)
-    this.survQues.push(this.survQues3)
-   console.log(this.survQues)
-   this.addSurv(this.survQues)
+  //   this.survQues.push(this.survQues1)
+  //   this.survQues.push(this.survQues2)
+  //   this.survQues.push(this.survQues3)
+  //  console.log(this.survQues)
+  //  this.addSurv(this.survQues)
   }
 addSurv(survy:SurveyQuestions[]){
   console.log(this.survQues)
