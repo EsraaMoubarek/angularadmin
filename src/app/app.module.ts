@@ -5,11 +5,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {  
   MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, MatCardModule, MatSidenavModule,  
-  MatInputModule, MatTooltipModule, MatProgressSpinnerModule, MatTabsModule, MatDividerModule, 
+  MatInputModule, MatTooltipModule, MatProgressSpinnerModule, MatTabsModule, MatDividerModule,
     
 } from '@angular/material';  
 
-import {MatFormFieldModule} from '@angular/material/form-field';
+//import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
@@ -64,6 +64,7 @@ import { DiscollectorsComponent } from './discollectors/discollectors.component'
 import { DisdriversComponent } from './disdrivers/disdrivers.component';
 import { DisregionsComponent } from './disregions/disregions.component';
 import { DismapComponent } from './dismap/dismap.component';
+import { NewsurveyComponent } from './newsurvey/newsurvey.component';
 
 
 @NgModule({
@@ -119,6 +120,7 @@ import { DismapComponent } from './dismap/dismap.component';
     InstructionListComponent,
     DialogComponent,
     NotifyDialogBoxComponent,
+    NewsurveyComponent,
     
   ],
   imports: [
@@ -135,7 +137,7 @@ import { DismapComponent } from './dismap/dismap.component';
     MatRadioModule,  
     MatCardModule,  
     MatSidenavModule,  
-    MatFormFieldModule,  
+   // MatFormFieldModule,  
     MatInputModule,  
     MatTooltipModule,  
     MatToolbarModule,  
