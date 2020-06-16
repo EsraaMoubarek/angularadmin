@@ -32,10 +32,17 @@ export class ManagerNavbarComponent implements OnInit {
         label: 'Regions',
         link: '/disregs',
         index: 3
-      }
+      },
+      { 
+        label: 'log out',
+        link: '/Homelogin', 
+        index: 4
+      },
     ];
   }
-
+  logOut(){
+    localStorage.removeItem("jwt");
+  }
   ngOnInit(): void {
     this.router.events.subscribe((res) => {
       this.activeLinkIndex = this.navLinks.indexOf(this.navLinks.find(tab => tab.link === '.' + this.router.url));

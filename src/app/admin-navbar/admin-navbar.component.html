@@ -62,9 +62,10 @@
           </a>
           <p class="mr-3 mt-2"style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1.5em;color: rgb(68, 167, 68)">WasteApp</p>
   <!-- </div> -->
-      <a class="mt-2" mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" style="min-width: 20px;"
-       routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">{{link.label}}
-
+      <a class="mt-2" mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link"
+       style="min-width: 20px;" 
+       routerLinkActive #rla="routerLinkActive" (click)="link.index == 9 ?logOut(): null" [active]="rla.isActive">{{link.label}}
+        
       </a>
     
     </nav>

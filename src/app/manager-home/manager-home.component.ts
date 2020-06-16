@@ -36,11 +36,14 @@ title = 'The most region with clients ';
    }
 
    getData(){
-    this.wasteServ.getWasteData().subscribe(a=>{this.wasteServ.wastesShared=a
-    console.log(a)})
+    this.wasteServ.getWasteData().subscribe(a=>
+      {this.wasteServ.wastesShared=a
+       console.log(a)})
    // this.wasteServ.getAvgPrice().subscribe(a=>{this.avgPrice=a})
     }
   ngOnInit(): void {
+    this.getData()
   }
+
 
 }

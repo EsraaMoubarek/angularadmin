@@ -50,16 +50,24 @@ export class AdminNavbarComponent implements OnInit {
       {
         label: 'Instructions',
         link: '/AddInstructions',
-        index: 7
+        index: 7,
       },
       { 
         label: 'Survay',
         link: '/Survey',
-        index: 7
+        index: 8
+      },
+      { 
+        label: 'log out',
+        link: '/Homelogin', 
+        index: 9
       },
     ];
   }
 
+  logOut(){
+    localStorage.removeItem("jwt");
+  }
   ngOnInit(): void {
     this.router.events.subscribe((res) => {
       this.activeLinkIndex = this.navLinks.indexOf(this.navLinks.find(tab => tab.link === '.' + this.router.url));

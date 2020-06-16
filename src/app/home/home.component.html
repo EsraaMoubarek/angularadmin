@@ -12,7 +12,7 @@
       </p>
     </div>
   </div>
-  <google-map width="1110" height="400" [center]="position">
+  <google-map width="1110" height="400" [center]="position" [zoom]="12">
     <map-marker *ngFor="let mark of todyScheds ; let i = index " [position]="markers[i].position" [label]="markers[i].label"
       title="{{markers[i].title}}">
     </map-marker>

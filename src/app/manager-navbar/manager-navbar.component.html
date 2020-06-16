@@ -8,7 +8,9 @@
         
     <!-- </div> -->
   
-        <a class="mt-2" mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">{{link.label}}
-  
+        <a class="mt-2" mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" 
+        routerLinkActive #rla="routerLinkActive" [active]="rla.isActive"
+         (click)="link.index == 4 ?logOut(): null">
+        {{link.label}}
         </a>
       </nav>
