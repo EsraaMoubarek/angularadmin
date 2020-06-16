@@ -52,13 +52,14 @@ export class PromotionsListComponent implements OnInit {
   delete(item){
 
     
-    if(confirm("Are you sure to delete Instruction")) {
+    if(confirm("Are you sure to delete promotion")) {
 
       this.service.deletePromotion(item.id).subscribe((response:Response)  => {
        
         this.getArray();
       },
         err => {
+          console.log(err);
           alert("Can't delete promotions");
         });
     }

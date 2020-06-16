@@ -1,5 +1,5 @@
 export class Port {
-     port:number=50856
+     port:number=50856;
      valid:boolean=false
     constructor(){}
 }

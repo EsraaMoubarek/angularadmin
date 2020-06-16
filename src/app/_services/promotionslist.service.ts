@@ -14,6 +14,6 @@ export class PromotionslistService {
   }
   deletePromotion(id){
    return this.httpService.delete('http://localhost:'+this.port.port+'/api/admin/deletepromotion/'+id)
-     
+
   }
 }

@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   // global:TestService=new TestService()
   token: string;
 
-  port:Port=new Port()
+  port:Port=new Port();
   constructor(public http: HttpClient, public router: Router) { }
   login(form: NgForm) {
 
@@ -64,6 +64,7 @@ export class LoginComponent implements OnInit {
         alert("Invalid LogIn");
       }
     }, err => {
+      console.log(err)
       // this.invalidLogin = true;
       alert("You NOT Regestiered In The System");
 
