@@ -64,6 +64,7 @@ import { DiscollectorsComponent } from './discollectors/discollectors.component'
 import { DisdriversComponent } from './disdrivers/disdrivers.component';
 import { DisregionsComponent } from './disregions/disregions.component';
 import { DismapComponent } from './dismap/dismap.component';
+import { NewsurveyComponent } from './newsurvey/newsurvey.component';
 
 
 @NgModule({
@@ -119,6 +120,7 @@ import { DismapComponent } from './dismap/dismap.component';
     InstructionListComponent,
     DialogComponent,
     NotifyDialogBoxComponent,
+    NewsurveyComponent,
     
   ],
   imports: [

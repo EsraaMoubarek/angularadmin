@@ -9,8 +9,11 @@ import { SurveyQuestions } from '../_models/survey-questions';
 export class SurveySurviceService {
   port:Port=new Port()
 
-addSurvey(survQues:SurveyQuestions[]){
+addDiffQuesSurvey(survQues:SurveyQuestions[]){
   return this.http.post("http://localhost:"+this.port.port+"/api/survey/PostAddSurvey",survQues)
+}
+addFixedQuesSurvey(survQues:string[]){
+  return this.http.post("http://localhost:"+this.port.port+"/api/survey/PostFixedQues",survQues)
 }
   constructor(private http:HttpClient) { }
 }

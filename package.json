@@ -16,7 +16,7 @@
     "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.6",
     "@angular/compiler": "~9.1.6",
-    "@angular/core": "^9.1.9",
+    "@angular/core": "^9.1.11",
     "@angular/forms": "~9.1.6",
     "@angular/google-maps": "^9.2.4",
     "@angular/material": "^7.3.7",

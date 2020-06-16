@@ -14,11 +14,11 @@ import {EditWastePriceComponent} from '../app/edit-waste-price/edit-waste-price.
 import {ManagerHomeComponent} from '../app/manager-home/manager-home.component'
 //<<<<<<< HEAD
 import {AddSurveyComponent} from '../app/add-survey/add-survey.component'
-import {QuestionComponent} from '../app/question/question.component'
+//import {QuestionComponent} from '../app/question/question.component'
 ////>>>>>>> 8356c9f3295a7ac1869c2b1f8e4f83810bca0ac6
-import { SurveyComponent } from './survey/survey.component';
-import { SurveyQuestionsComponent } from './survey-questions/survey-questions.component';
-
+//import { SurveyComponent } from './survey/survey.component';
+//import { SurveyQuestionsComponent } from './survey-questions/survey-questions.component';
+import {NewsurveyComponent} from './newsurvey/newsurvey.component'
 import { CompanyComponent } from './company/company.component';
 import { AddPromOnlyComponent } from './add-prom-only/add-prom-only.component';
 
@@ -110,8 +110,8 @@ const routes: Routes = [
 },
 {
 //<<<<<<< HEAD
-  path: "Ques",
-  component: QuestionComponent,
+  path: "SurvQues",
+  component: NewsurveyComponent,
 },
 {
   path: 'feedback',
