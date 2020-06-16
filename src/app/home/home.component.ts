@@ -68,4 +68,15 @@ createSurvey(){
       }
     })
   }
+
+  AssignRequests(){
+    this.todaySchServ.AssignRequests().subscribe((flag) => {
+      if(flag == 1){
+        alert("Requests assigned to collectors successfully!")
+      }
+      else{
+        alert("Failed to assign requests to collectors!")
+      }
+    })
+  }
 }

@@ -7,9 +7,21 @@
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Today Schedule</h1>
-      <p class="lead">{{ myDate | date :'short'}}
-      </p>
+      <div class="row">
+        <div class="col-8">
+          <h1 class="display-4">Today Schedule</h1>
+          <p class="lead">{{ myDate | date :'short'}}
+          </p>
+        </div>
+        <div class="col-4">
+            <div class="row mt-4">
+              <label style="font-size: large; color: darkgreen; text-decoration-line: underline;">Assign requests to collectors Today!</label><br/>
+              <!-- <button class="btn text-dark bg-light text-success" -->
+              <button class="btn btn-outline-success" (click)="AssignRequests()"
+              style="margin-left: 70px; width: 150px; font-weight: bold;">Assign</button>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
   <google-map width="1110" height="400" [center]="position" [zoom]="12">

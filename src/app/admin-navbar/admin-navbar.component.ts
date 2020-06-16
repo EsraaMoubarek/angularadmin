@@ -53,7 +53,7 @@ export class AdminNavbarComponent implements OnInit {
         index: 7,
       },
       { 
-        label: 'Survay',
+        label: 'Survey',
         link: '/Survey',
         index: 8
       },

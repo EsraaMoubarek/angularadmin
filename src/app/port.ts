@@ -1,3 +1,3 @@
 export class Port {
- public   port:number=50856 
+ public   port:number=7777 
 }

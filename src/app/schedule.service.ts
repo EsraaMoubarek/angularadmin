@@ -6,11 +6,13 @@ import { Schedule } from './schedule';
 import { Region } from './region';
 import { User } from './user';
 import { SchCol } from './sch-col';
+import { Port } from './port';
 @Injectable({
   providedIn: 'root'
 })
 export class ScheduleService {
-  url ='http://localhost:50856/home'
+  port:Port=new Port()
+  url ='http://localhost:'+this.port.port+'/home'
   constructor(private http: HttpClient) { }
   getall(): Observable<Schedule[]> { 
     
@@ -25,23 +27,23 @@ export class ScheduleService {
   ///
   createSchcol(schcol:SchCol): Observable<SchCol> {  
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };  
-    return this.http.post<SchCol>('http://localhost:50856/addschcol',  
+    return this.http.post<SchCol>('http://localhost:'+this.port.port+'/addschcol',  
     schcol, httpOptions);  
   }
   ///
   getallreg(): Observable<Region[]> { 
      
-    return this.http.get<Region[]>('http://localhost:50856/Region/Regionsch');  
+    return this.http.get<Region[]>('http://localhost:'+this.port.port+'/Region/Regionsch');  
   }  
   //
   getalldri(): Observable<User[]> { 
     
-    return this.http.get<User[]>('http://localhost:50856/driver');  
+    return this.http.get<User[]>('http://localhost:'+this.port.port+'/driver');  
   } 
   //
   getallcol(): Observable<User[]> { 
     
-    return this.http.get<User[]>('http://localhost:50856/collector');  
+    return this.http.get<User[]>('http://localhost:'+this.port.port+'/collector');  
   }
   ////
   delSchedule(id:string): Observable<Schedule> {  
@@ -50,7 +52,7 @@ export class ScheduleService {
   } 
   delScheduleCol(id:string): Observable<SchCol> {  
     //const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };  
-    return this.http.delete<SchCol>('http://localhost:50856/'+id);  
+    return this.http.delete<SchCol>('http://localhost:'+this.port.port+'/'+id);  
   } 
   
 

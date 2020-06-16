@@ -23,7 +23,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { AppComponent } from '../app.component';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
-// import { Port } from '../_models/port';
+import { Port } from '../port';
 
 @Component({
   selector: 'app-login',
@@ -35,12 +35,12 @@ export class LoginComponent implements OnInit {
   // global:TestService=new TestService()
   token: string;
 
-  //  port:Port=new Port()
+  port:Port=new Port()
   constructor(public http: HttpClient, public router: Router) { }
   login(form: NgForm) {
 
     let credentials = JSON.stringify(form.value);
-    this.http.post("http://localhost:50856" + "/api/auth/login", credentials, {
+    this.http.post("http://localhost:"+ this.port.port + "/api/auth/login", credentials, {
       headers: new HttpHeaders({
         "Content-Type": "application/json"
       })

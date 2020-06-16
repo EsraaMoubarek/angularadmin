@@ -10,7 +10,10 @@ export class TodayScheduleService {
   port:Port=new Port();
   getTodaySchedule(): Observable<object[]>{
 
-   return this.http.get<object[]>("http://localhost:50856/api/admin/getadminschedule");
+   return this.http.get<object[]>("http://localhost:"+this.port.port+"/api/admin/getadminschedule");
   }
   constructor(private http:HttpClient) { }
+  AssignRequests(){
+    return this.http.get<number>("http://localhost:"+this.port.port+"/api/Request/reqstocollecs")
+  }
 }
