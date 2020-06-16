@@ -3,8 +3,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head> -->
 
-<div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
@@ -46,8 +45,9 @@
         </ul>
       </div>
     </div>
-  </nav>
-</div>
+  </nav> -->
+  <app-admin-navbar></app-admin-navbar>
+ 
 <!-- //// -->
 <div class="container">
 
@@ -86,7 +86,9 @@
 
       <div class="container">
         <div class="row">
+            <div class='col-sm-2'>
           <label>Select Date andTime</label>
+          </div>
           <div class='col-sm-6'>
             <input type='datetime-local' class="form-control" [(ngModel)]="newsch.Time" />
           </div>
@@ -95,7 +97,9 @@
         <br>
         <!-- /// -->
         <div class="row">
+            <div class='col-sm-2'>
           <label>Select Driver</label>
+          </div>
           <div class='col-sm-6'>
             <select [(ngModel)]="newsch.DriverId" class="form-control">
 
@@ -109,7 +113,9 @@
         <br>
         <!-- /// -->
         <div class="row">
+            <div class='col-sm-2'>
           <label>Select Region</label>
+          </div>
           <div class='col-sm-6'>
             <select [(ngModel)]="newsch.RegionId" class="form-control">
 
@@ -123,7 +129,9 @@
         <hr>
         <!-- /// col1 -->
         <div class="row">
+            <div class='col-sm-2'>
           <label>Select Collector 1</label>
+          </div>
           <div class='col-sm-6'>
             <select [(ngModel)]="newcol1.CollectorId" class="form-control">
 
@@ -135,7 +143,9 @@
         </div>
         <!-- /// col2 -->
         <div class="row">
+            <div class='col-sm-2'>
           <label>Select Collector 2</label>
+          </div>
           <div class='col-sm-6'>
             <select class="form-control" [(ngModel)]="newcol2.CollectorId">
 
@@ -147,7 +157,9 @@
         </div>
 
         <div class="row">
+            <div class='col-sm-2'>
           <label>Select Collector 3</label>
+          </div>
           <div class='col-sm-6'>
             <select class="form-control" [(ngModel)]="newcol3.CollectorId">
 

@@ -1,89 +1,42 @@
-<html>
 
 
-<body>
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
-        </a>
-        <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1.5em;color: rgb(68, 167, 68)" >WasteApp</p>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto"style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1em;">
-            <li class="nav-item active">
-              <a class="nav-link" href="/Home">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/Schedule">Schedule</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/adddriver">Add Driver</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/addcol">Add Collector</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" routerLink="/Waste">Waste Prices</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- //// -->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Today Schedule</h1>
-        <p class="lead">{{ myDate | date :'short'}}
-        </p>
-        </div>
+  <app-admin-navbar></app-admin-navbar>
+  <!-- //// -->
+<div class="container">
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Today Schedule</h1>
+      <p class="lead">{{ myDate | date :'short'}}
+      </p>
     </div>
-    <google-map width="1110" height="400" [center]="position">
-      <map-marker [position]="position"
-      [label]="label"
-      [title]="title">
+  </div>
+  <google-map width="1110" height="400" [center]="position">
+    <map-marker *ngFor="let mark of todyScheds ; let i = index " [position]="markers[i].position" [label]="markers[i].label"
+      title="{{markers[i].title}}">
     </map-marker>
-      <map-marker *ngFor="let i in todyScheds ;  " [title]="title"  [label]="label"  [position]="position"> 
-    </map-marker>
+  </google-map>
+  <br/>
+  <table class="table table-active ">
+    <thead>
+      <tr class="table-info" ngclass="btn-primary">
+        <th scope="col">Region</th>
+        <th scope="col">Driver Name</th>
+        <th scope="col">Collectors</th>
 
-    
-    </google-map>
-    <br/>
-    <table   class="table table-active ">
-      <thead>
-        <tr class="table-info" ngclass="btn-primary">
-          <th scope="col">Region</th>
-          <th scope="col">Driver Name</th>
-          <th scope="col">Collectors</th>
-  
-        </tr>
-      </thead>
-      <tbody>
+      </tr>
+    </thead>
+    <tbody>
       <tr class="table-success" *ngFor="let schedule of todyScheds ">
         <td>{{schedule.region}}</td>
         <td>{{schedule.driver }}</td>
         <td>
-          <tr class="table-success table-borderless " *ngFor="let coll of schedule.collecList" >
-            <td >{{coll}}</td>
+          <tr class="table-success table-borderless " *ngFor="let coll of schedule.collecList">
+            <td>{{coll}}</td>
           </tr>
         </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</body>
-
-</html>
+      </tr>
+    </tbody>
+  </table>
+</div>

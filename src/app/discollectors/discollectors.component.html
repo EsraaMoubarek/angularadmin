@@ -1,0 +1,104 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../../assets/1.png" alt="" style="width:40px;height:40px;">
+    </a>
+    <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1.5em;color: rgb(68, 167, 68)">WasteApp</p>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 1em;">
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/Home">Home Manager</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/discol">Collectors</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<div class="container">
+
+<app-manager-navbar></app-manager-navbar>
+
+<mat-toolbar color="Green">
+  <div align="center" style="color:rgb(47, 158, 37);" class="text-center h2">
+    Collectors
+  </div>
+</mat-toolbar>
+
+
+<mat-form-field>
+  <mat-label>Search</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ahmed">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort class="table table-bordered ">
+
+    
+    <ng-container matColumnDef="id"  >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-center h4"> ID </th>
+      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+    </ng-container>
+
+   
+    <ng-container matColumnDef="userName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-center h4"> Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.userName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="phoneNumber">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-center h4"> PhoneNumber</th>
+      <td mat-cell *matCellDef="let row"> {{row.phoneNumber}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-center h4"> Email</th>
+        <td mat-cell *matCellDef="let row"> {{row.email}}</td>
+      </ng-container>
+
+    
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
+</div>
+
+
+<!-- <mat-toolbar color="Green">
+  <div align="center" style="color:rgb(47, 158, 37);" class="text-center h2">
+    Collectors
+  </div>
+</mat-toolbar>
+<mat-card-content>
+    <table class="table table-bordered text-center">
+      <tr ngclass="btn-primary">
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone Number</th>
+
+      </tr>
+      <tr *ngFor="let col of dataSource ">
+        <td scope="row">{{col.id}}</td>
+        <td class="tb">{{col.userName}}</td>
+        <td class="tb">{{col.phoneNumber}}</td>
+        
+      </tr>
+    </table> -->
+  <!-- </form> -->
