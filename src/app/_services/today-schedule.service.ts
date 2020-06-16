@@ -13,4 +13,7 @@ export class TodayScheduleService {
    return this.http.get<object[]>("http://localhost:"+this.port.port+"/api/admin/getadminschedule");
   }
   constructor(private http:HttpClient) { }
+  AssignRequests(){
+    return this.http.get<number>("http://localhost:"+this.port.port+"/api/Request/reqstocollecs")
+  }
 }
