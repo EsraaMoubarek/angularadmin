@@ -10,7 +10,8 @@ import { SurveySurviceService } from '../_services/survey-survice.service';
 export class NewsurveyComponent implements OnInit {
 
   public sss:string[]=[]
-public ss = new Array<SurveyQuestions>(3);
+  ss:SurveyQuestions[]=[]
+// public ss = new Array<SurveyQuestions>(3);
 //public survQues:SurveyQuestions[]=new SurveyQuestions() [3] //not good 
 //survQues:Array<SurveyQuestions> = []
  survQues=new Array<string>(4);
@@ -19,8 +20,6 @@ public ss = new Array<SurveyQuestions>(3);
  survQues3:SurveyQuestions=new SurveyQuestions()
 
 add(){
-
-
 
 }
 
@@ -33,8 +32,11 @@ add(){
     this.ss.push(this.survQues3)
    console.log(this.survQues)
    console.log(this.ss)
-   this.survServ.addDiffQuesSurvey(this.ss).subscribe(a=>{console.log(a)})
-this.survServ.addFixedQuesSurvey(this.survQues).subscribe(a=>{console.log(a)})
+
+   this.survServ.getAddSurvey().subscribe(response=>{console.log(response)})
+   this.survServ.addFixedQuesSurvey(this.survQues).subscribe(response=>{console.log(response)
+    this.survServ.addDiffQuesSurvey(this.ss).subscribe(a=>{console.log(a)})
+  })
 
    //this.addSurv(this.survQues)
   }
