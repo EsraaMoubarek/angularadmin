@@ -6,4 +6,5 @@ export class Promotion {
     DateTo:Date;
     Details:string;
     CompanyId:string;
+
 }

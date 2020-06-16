@@ -22,7 +22,9 @@ export class ScheduleComponent implements OnInit {
   newsch: Schedule = new Schedule();
   regions: Region[] = [];
   drivers: User[] = [];
+
   collectors: User[] = [];
+
   newcol1: SchCol = new SchCol();
   newcol2: SchCol = new SchCol();
   newcol3: SchCol = new SchCol();

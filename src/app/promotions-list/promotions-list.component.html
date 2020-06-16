@@ -1,0 +1,94 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link " href="/addcomp" style="color:rgb(47, 158, 37);">With New Company</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/promonly" style="color:rgb(47, 158, 37);">With Existing Company</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/PromotionsList" style="color:rgb(47, 158, 37);">Promotions list</a>
+        </li>
+    </ul>
+</div>
+
+<div style="width:130px; margin:0 auto;" class="mb-4">
+    <mat-spinner *ngIf="!dataSource" ></mat-spinner>
+  </div>
+  <div *ngIf="dataSource">
+
+    <div class="example-header row mr-0">
+        <div class="col">
+          <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.taregt.value)" placeholder="Filter">
+          </mat-form-field>
+        </div>
+        <div class="col">
+    
+          <mat-paginator #paginator [pageSize]="pageSize"  [length]="totalSize"
+          [pageIndex]="currentPage" (page)=" handlePage($event)">
+          </mat-paginator>
+        </div>
+      </div>
+  
+  <div class="example-container mat-elevation-z8">
+      <table mat-table #table [dataSource]="dataSource" matSort >
+  
+          <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="requiredPoints">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Points </th>
+              <td mat-cell *matCellDef="let element"> {{element.requiredPoints}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="dateFrom">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> From </th>
+              <td mat-cell *matCellDef="let element"> {{element.dateFrom  |  date:'MMMM d, y'}} </td>
+          </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="dateTo">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> To </th>
+              <td mat-cell *matCellDef="let element"> {{element.dateTo  |  date:'MMMM d, y'}} </td>
+      </ng-container>
+      <ng-container matColumnDef="company.name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Company </th>
+              <td mat-cell *matCellDef="let element"> {{element.company.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="delete">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>  </th>
+              <td mat-cell *matCellDef="let element"> 
+           <button mat-button (click) ="delete(element)">Delete</button></td>
+      </ng-container>
+      <ng-container matColumnDef="moreDetials">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+              <td mat-cell *matCellDef="let element"><mat-icon 
+          matSort matTooltip="More Detials" >more_vert</mat-icon></td>
+      </ng-container>
+    
+  
+      <ng-container matColumnDef="id" >
+              <th mat-header-cell *matHeaderCellDef mat-sort-header hidden> id </th>
+              <td mat-cell *matCellDef="let element" hidden> {{element.id}} </td>
+      </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" matRipple class="element-row">
+          </tr>
+
+      </table >
+  </div>
+<!--   <ng-template #tpl let-element>
+      <div class="mat-row detail-row" [@detailExpand] style="overflow: hidden">
+      <strong>Detials:</strong>	 {{" "}} {{element.details}} 
+    </div>
+    <mat-divider></mat-divider>
+  </ng-template>
+   -->
+  </div>
+  

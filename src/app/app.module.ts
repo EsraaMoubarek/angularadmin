@@ -65,6 +65,7 @@ import { DisdriversComponent } from './disdrivers/disdrivers.component';
 import { DisregionsComponent } from './disregions/disregions.component';
 import { DismapComponent } from './dismap/dismap.component';
 import { NewsurveyComponent } from './newsurvey/newsurvey.component';
+import { PromotionsListComponent } from './promotions-list/promotions-list.component';
 
 
 @NgModule({
@@ -121,6 +122,7 @@ import { NewsurveyComponent } from './newsurvey/newsurvey.component';
     DialogComponent,
     NotifyDialogBoxComponent,
     NewsurveyComponent,
+    PromotionsListComponent,
     
   ],
   imports: [

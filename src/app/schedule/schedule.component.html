@@ -71,7 +71,7 @@
           <tr *ngFor="let schedule of allSchedules ">
             <td scope="row">{{schedule.id}}</td>
             <!-- <td class="tbl2">{{schedule.date | date }}</td>   -->
-            <td class="tb">{{schedule.time }}</td>
+            <td class="tb">{{schedule.time |  date:'MMM d, y, h:mm:ss a'}}</td>
             <td class="tb">{{schedule.driver.userName}}</td>
             <td class="tb">{{schedule.region.name}}</td>
             <td class="tb">

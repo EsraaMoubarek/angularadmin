@@ -29,6 +29,7 @@ import { DiscollectorsComponent } from './discollectors/discollectors.component'
 import { DisdriversComponent } from './disdrivers/disdrivers.component';
 import { DisregionsComponent } from './disregions/disregions.component';
 import { DismapComponent } from './dismap/dismap.component';
+import { PromotionsListComponent } from './promotions-list/promotions-list.component';
 
 
 //>>>>>>> 51889146068927b1a07687de8a9987239af324cf
@@ -70,7 +71,6 @@ const routes: Routes = [
     path: 'addcol',
     component:AddcolComponent,
   },
-
 {
   path: 'Homelogin',
   component: HomeloginComponent,
@@ -117,6 +117,10 @@ const routes: Routes = [
   path: 'feedback',
   component:  FeedbackComponent,
 //>>>>>>> 51889146068927b1a07687de8a9987239af324cf
+},
+{
+  path: 'PromotionsList',
+  component:  PromotionsListComponent,
 },
 { 
   path: '',
