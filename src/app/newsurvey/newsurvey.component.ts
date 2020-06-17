@@ -14,14 +14,12 @@ export class NewsurveyComponent implements OnInit {
 // public ss = new Array<SurveyQuestions>(3);
 //public survQues:SurveyQuestions[]=new SurveyQuestions() [3] //not good 
 //survQues:Array<SurveyQuestions> = []
- survQues=new Array<string>(4);
- survQues1:SurveyQuestions=new SurveyQuestions()
- survQues2:SurveyQuestions=new SurveyQuestions()
- survQues3:SurveyQuestions=new SurveyQuestions()
+  survQues=new Array<string>();
+  survQues1:SurveyQuestions=new SurveyQuestions()
+  survQues2:SurveyQuestions=new SurveyQuestions()
+  survQues3:SurveyQuestions=new SurveyQuestions()
 
-add(){
-
-}
+  add(){}
 
   constructor(public survServ:SurveySurviceService) { 
   //  router.navigate([{outlets: {primary: '/Ques' ,moreQues: '/Ques'}}]);
@@ -30,12 +28,19 @@ add(){
     this.ss.push(this.survQues1)
     this.ss.push(this.survQues2)
     this.ss.push(this.survQues3)
-   console.log(this.survQues)
-   console.log(this.ss)
+    console.log(this.survQues)
+    console.log(this.ss)
 
-   this.survServ.getAddSurvey().subscribe(response=>{console.log(response)})
-   this.survServ.addFixedQuesSurvey(this.survQues).subscribe(response=>{console.log(response)
-    this.survServ.addDiffQuesSurvey(this.ss).subscribe(a=>{console.log(a)})
+   this.survServ.getAddSurvey().subscribe(
+     response=>{
+      console.log(response)
+
+      this.survServ.addFixedQuesSurvey(this.survQues).subscribe(
+        response=>{console.log(response)
+
+      this.survServ.addDiffQuesSurvey(this.ss).subscribe(a=>{console.log(a)
+      })
+    })
   })
 
    //this.addSurv(this.survQues)

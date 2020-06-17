@@ -1,0 +1,20 @@
+.grad {
+    background-image: linear-gradient(to right, #22892d, #74d14c);
+    border: none;
+}
+.ng-touched.ng-invalid-required {
+    border-color: red;
+}
+.ng-dirty.ng-invalid {
+  border-color: red;
+}
+.ng-untouched.ng-invalid {
+    border-color: gray;
+    
+}
+.ng-submitted input.ng-invalid{
+    border-color: red;
+}
+.ng-pristine {
+    border-color: red;  
+}

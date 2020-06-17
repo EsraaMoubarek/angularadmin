@@ -1,194 +1,198 @@
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </head>
-    <body> 
-    <!-- <a  class="btn btn-success "  [routerLink]="['/Ques']">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <app-admin-navbar></app-admin-navbar>
+  <!-- <a  class="btn btn-success "  [routerLink]="['/Ques']">
       <span class="glyphicon glyphicon-plus"></span> Plus 
     </a> -->
-    
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <br/>
-      </li>
-    </ul>
-    <br/>
-    <br/>
-    <br/>
-    <div class="container-fluid" >
-        
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <br />
+    </li>
+  </ul>
+  <br />
+  <br />
+  <br />
+  <div class="container-fluid">
+
     <!-- different questions -->
     <!-- 1 -->
-      <div class="row">
-        <div class="col-lg-1">
-        </div>
-       <div class="col-lg-4">
+    <div class="row">
+      <div class="col-lg-1">
+      </div>
+      <div class="col-lg-4">
 
-        <div style="color: green;"class="display-4">Different Questions</div>
-        <br/>
-        </div>
+        <div style="color: green;" class="display-4">Different Questions</div>
+        <br />
       </div>
-      <div class="row">
-       <div class="col-lg-1">
-       </div>
-        <div class="col-lg-2">
-            
-        <label for="text" class="sr-only">Question</label>
-    <p>
-           <input type="text" placeholder="Placeholder"  class="form-control" [(ngModel)]="survQues1.Question">
-           
-        </p>
-        </div>
-        <div class="col-lg-1">
-        </div>
-        <div class="col-lg-2">
-          <label for="text" class="sr-only">Ans1</label>
-        <p>
-           <input matInput placeholder="Placeholder"  class="form-control" [(ngModel)]="survQues1.ChoiceA">
-        </p>
-       </div>
-       <div class="col-lg-1">
-      </div>
-      <div class="col-lg-2">
-        <label for="text" class="sr-only">Ans2</label>
-    <p>
-         <input matInput placeholder="Placeholder"  class="form-control" [(ngModel)]="survQues1.ChoiceB">
-        </p>
-     </div>
-     <div class="col-lg-1">
     </div>
+      
+    <div class="row">
+      <div class="col-lg-1">
+      </div>
+
+      <div class="col-lg-2 mr-5">
+
+        <label for="text" class="sr-only">Question</label>
+        <p>
+          <input type="text" placeholder="Question 1" required class="form-control" [(ngModel)]="survQues1.Question">
+        </p>
+
+      </div>
+
+  
+
+    <div class="col-lg-2">
+      <label for="text" class="sr-only">Ans1</label>
+      <p>
+        <input matInput placeholder="Answer 1" required class="form-control" [(ngModel)]="survQues1.ChoiceA">
+      </p>
+    </div>
+
+  
+
+    <div class="col-lg-2">
+      <label for="text" class="sr-only">Ans2</label>
+      <p>
+        <input matInput placeholder="Answer 2" required class="form-control" [(ngModel)]="survQues1.ChoiceB">
+      </p>
+    </div>
+
+
     <div class="col-lg-2">
       <label for="text" class="sr-only">Ans3</label>
-    <p>
-       <input  placeholder="Placeholder"  class="form-control" [(ngModel)]="survQues1.ChoiceC">
-    </p>
+      <p>
+        <input placeholder="Answer 3" required class="form-control" [(ngModel)]="survQues1.ChoiceC">
+      </p>
     </div>
-    </div>  
-    <!-- *********2********** -->
-    <div class="row">
-      <div class="col-lg-1">
-      </div>
-       <div class="col-lg-2">
-       <label for="text" class="sr-only">Question</label>
-    <p>
-          <input type="text" placeholder="Placeholder"  class="form-control" [(ngModel)]="survQues2.Question">
-        </p>
-       </div>
-       <div class="col-lg-1">
-       </div>
-       <div class="col-lg-2">
-         <label for="text" class="sr-only">Ans1</label>
-        <p>
-          <input matInput placeholder="Placeholder" class="form-control" [(ngModel)]="survQues2.ChoiceA">
-        </p>
-      </div>
-      <div class="col-lg-1">
-     </div>
-     <div class="col-lg-2">
-       <label for="text" class="sr-only">Ans2</label>
-    <p>
-        <input matInput placeholder="Placeholder" class="form-control" [(ngModel)]="survQues2.ChoiceB">
-    </p>
-    </div>
+
+  </div>
+  <!-- *********2********** -->
+  <div class="row">
     <div class="col-lg-1">
     </div>
-    <div class="col-lg-2">
-     <label for="text" class="sr-only">Ans3</label>
-    <p>
-      <input  placeholder="Placeholder"  class="form-control" [(ngModel)]="survQues2.ChoiceC">
-    </p>
+    <div class="col-lg-2 mr-5">
+      <label for="text" class="sr-only">Question</label>
+      <p>
+        <input type="text" placeholder="Question 2" required class="form-control" [(ngModel)]="survQues2.Question">
+      </p>
     </div>
-    </div>  
-    <!-- 3 -->
-    <div class="row">
-      <div class="col-lg-1">
-      </div>
-       <div class="col-lg-2">
-       <label for="text" class="sr-only">Question</label>
-    <p>
-          <input type="text" placeholder="Placeholder" class="form-control" [(ngModel)]="survQues3.Question">
-        </p>
-       </div>
-       <div class="col-lg-1">
-       </div>
-       <div class="col-lg-2">
-         <label for="text" class="sr-only">Ans1</label>
-         <p>
-          <input matInput placeholder="Placeholder"  class="form-control" [(ngModel)]="survQues3.ChoiceA">
-        </p>
-      </div>
-      <div class="col-lg-1">
-     </div>
-     <div class="col-lg-2">
-       <label for="text" class="sr-only">Ans2</label>
-       <p>
-        <input matInput placeholder="Placeholder"  class="form-control" [(ngModel)]="survQues3.ChoiceB">
-        </p>
-    </div>
-    <div class="col-lg-1">
-    </div>
-    <div class="col-lg-2">
-     <label for="text" class="sr-only">Ans3</label>
-     <p>
-      <input  placeholder="Placeholder" class="form-control" [(ngModel)]="survQues3.ChoiceC">
-    </p>
-    </div>
-    </div> 
-          
-      <!-- *********fixed********** -->
-      <div class="row">
-        <div class="col-lg-1">
-        </div>
-       <div class="col-lg-4">
 
-        <div style="color: green;"class="display-4">Fixed Questions</div>
-        <br/>
-        </div>
-      </div>
-      <div class="row" >
-        <div class="col-lg-1">   
-        </div>
-        <div class="col-lg-4">
-         <p>
-          <label for="text" class="sr-only">Password</label>
-          <input type="text" placeholder="Placeholder" class="form-control" [(ngModel)]="survQues[0]"> 
-           </p>
-        </div>
-      </div> 
-      <div class="row" >
-        <div class="col-lg-1">   
-        </div>
-        <div class="col-lg-4">
-         <p>
-          <label for="text" class="sr-only">Password</label>
-          <input type="text" placeholder="Placeholder" class="form-control" [(ngModel)]="survQues[1]"> 
-           </p>
-        </div>
-      </div> 
-      <div class="row" >
-        <div class="col-lg-1">   
-        </div>
-        <div class="col-lg-4">
-         <p>
-          <label for="text" class="sr-only">Password</label>
-          <input type="text" placeholder="Placeholder" class="form-control" [(ngModel)]="survQues[2]"> 
-           </p>
-        </div>
-      </div> 
-      <div class="row" >
-        <div class="col-lg-1">   
-        </div>
-        <div class="col-lg-4">
-         <p>
-          <label for="text" class="sr-only">Password</label>
-          <input type="text" placeholder="Placeholder" class="form-control" [(ngModel)]="survQues[3]"> 
-           </p>
-        </div>
-      </div> 
-
+    <div class="col-lg-2">
+      <label for="text" class="sr-only">Ans1</label>
+      <p>
+        <input matInput placeholder="Answer 1" required class="form-control" [(ngModel)]="survQues2.ChoiceA">
+      </p>
+    </div>
+   
+    <div class="col-lg-2">
+      <label for="text" class="sr-only">Ans2</label>
+      <p>
+        <input matInput placeholder="Answer 2" required class="form-control" [(ngModel)]="survQues2.ChoiceB">
+      </p>
     </div>
     
-    <a class="btn btn-success" (click)="fillSurveyArray()">Save</a>
-     
+    <div class="col-lg-2">
+      <label for="text" class="sr-only">Ans3</label>
+      <p>
+        <input placeholder="Answer 3" required class="form-control" [(ngModel)]="survQues2.ChoiceC">
+      </p>
+    </div>
+  </div>
+  <!-- 3 -->
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-2 mr-5">
+      <label for="text" class="sr-only">Question</label>
+      <p>
+        <input type="text" placeholder="Question 3" required class="form-control" [(ngModel)]="survQues3.Question">
+      </p>
+    </div>
+  
+    <div class="col-lg-2">
+      <label for="text" class="sr-only">Ans1</label>
+      <p>
+        <input matInput placeholder="Answer 1" required class="form-control" [(ngModel)]="survQues3.ChoiceA">
+      </p>
+    </div>
+   
+    <div class="col-lg-2">
+      <label for="text" class="sr-only">Ans2</label>
+      <p>
+        <input matInput placeholder="Answer 2" required class="form-control" [(ngModel)]="survQues3.ChoiceB">
+      </p>
+    </div>
+   
+    <div class="col-lg-2">
+      <label for="text" class="sr-only">Ans3</label>
+      <p>
+        <input placeholder="Answer 3" required class="form-control" [(ngModel)]="survQues3.ChoiceC">
+      </p>
+    </div>
+  </div>
+
+  <!-- *********fixed********** -->
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-4">
+
+      <div style="color: green;" class="display-4">Fixed Questions</div>
+      <br />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-4">
+      <p>
+        <input type="text" placeholder="Question 1" required class="form-control" [(ngModel)]="survQues[0]">
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-4">
+      <p>
+        <input type="text" placeholder="Question 2" required class="form-control" [(ngModel)]="survQues[1]">
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-4">
+      <p>
+        <label for="text" class="sr-only">Password</label>
+        <input type="text" placeholder="Question 3" required class="form-control" [(ngModel)]="survQues[2]">
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-4">
+      <p>
+        <label for="text" class="sr-only">Password</label>
+        <input type="text" placeholder="Question 4" required class="form-control" [(ngModel)]="survQues[3]">
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-4">
+      <a class="btn btn-success" (click)="fillSurveyArray()">Save</a>
+    </div>
+  </div>
+<!-- 
+  </div> -->

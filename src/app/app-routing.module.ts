@@ -93,7 +93,7 @@ const routes: Routes = [
 },{
   path: 'Survey',
   
-  component: AddSurveyComponent,
+  component: NewsurveyComponent,
 },
 {
   path: 'Waste',
