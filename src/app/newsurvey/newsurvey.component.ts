@@ -25,11 +25,11 @@ export class NewsurveyComponent implements OnInit {
   //  router.navigate([{outlets: {primary: '/Ques' ,moreQues: '/Ques'}}]);
   console.log(this.survQues)}
   fillSurveyArray(){
-    this.ss.push(this.survQues1)
-    this.ss.push(this.survQues2)
-    this.ss.push(this.survQues3)
-    console.log(this.survQues)
-    console.log(this.ss)
+    // this.ss.push(this.survQues1)
+    // this.ss.push(this.survQues2)
+    // this.ss.push(this.survQues3)
+    // console.log(this.survQues)
+    // console.log(this.ss)
 
    this.survServ.getAddSurvey().subscribe(
      response=>{
@@ -38,9 +38,9 @@ export class NewsurveyComponent implements OnInit {
       this.survServ.addFixedQuesSurvey(this.survQues).subscribe(
         response=>{console.log(response)
           alert("Fixed Questions added successfully");
-      this.survServ.addDiffQuesSurvey(this.ss).subscribe(a=>{console.log(a)
-        alert("Customized questions Questions added successfully");
-      })
+      // this.survServ.addDiffQuesSurvey(this.ss).subscribe(a=>{console.log(a)
+      //   alert("Customized questions Questions added successfully");
+     // })
     })
   })
 
