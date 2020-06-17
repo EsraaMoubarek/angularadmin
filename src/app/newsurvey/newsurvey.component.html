@@ -17,18 +17,69 @@
     </li>
   </ul>
   <br />
-  <br />
-  <br />
+
   <div class="container-fluid">
 
+    
+  <!-- *********fixed********** -->
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-10">
+
+      <div style="color: green;" class="display-4 mr-4">Fixed Questions</div>
+      <span style="font-size: 16px;" class="text-primary mt-2">* The Answers :is very satisfied, satisfied, partialy satisfied, Not satisfied </span>
+      <br />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-4">
+      <p>
+        <input type="text" placeholder="Question 1" required class="form-control" [(ngModel)]="survQues[0]">
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-4">
+      <p>
+        <input type="text" placeholder="Question 2" required class="form-control" [(ngModel)]="survQues[1]">
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-4">
+      <p>
+        <label for="text" class="sr-only">Password</label>
+        <input type="text" placeholder="Question 3" required class="form-control" [(ngModel)]="survQues[2]">
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-4">
+      <p>
+        <label for="text" class="sr-only">Password</label>
+        <input type="text" placeholder="Question 4" required class="form-control" [(ngModel)]="survQues[3]">
+      </p>
+    </div>
+  </div>
+  
     <!-- different questions -->
     <!-- 1 -->
-    <div class="row">
+    <div class="row mt-5">
       <div class="col-lg-1">
       </div>
       <div class="col-lg-4">
 
-        <div style="color: green;" class="display-4">Different Questions</div>
+        <div style="color: green;" class="display-4">Customized Questions</div>
         <br />
       </div>
     </div>
@@ -137,61 +188,11 @@
       </p>
     </div>
   </div>
-
-  <!-- *********fixed********** -->
-  <div class="row">
+  <div class="row mt-2">
     <div class="col-lg-1">
     </div>
-    <div class="col-lg-4">
-
-      <div style="color: green;" class="display-4">Fixed Questions</div>
-      <br />
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-1">
-    </div>
-    <div class="col-lg-4">
-      <p>
-        <input type="text" placeholder="Question 1" required class="form-control" [(ngModel)]="survQues[0]">
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-1">
-    </div>
-    <div class="col-lg-4">
-      <p>
-        <input type="text" placeholder="Question 2" required class="form-control" [(ngModel)]="survQues[1]">
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-1">
-    </div>
-    <div class="col-lg-4">
-      <p>
-        <label for="text" class="sr-only">Password</label>
-        <input type="text" placeholder="Question 3" required class="form-control" [(ngModel)]="survQues[2]">
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-1">
-    </div>
-    <div class="col-lg-4">
-      <p>
-        <label for="text" class="sr-only">Password</label>
-        <input type="text" placeholder="Question 4" required class="form-control" [(ngModel)]="survQues[3]">
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-1">
-    </div>
-    <div class="col-lg-4">
-      <a class="btn btn-success" (click)="fillSurveyArray()">Save</a>
+    <div class="col-lg-8">
+      <a class="btn btn-success" style="width: 100px;" (click)="fillSurveyArray()">Save</a>
     </div>
   </div>
 <!-- 

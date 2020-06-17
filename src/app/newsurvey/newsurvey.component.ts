@@ -37,8 +37,9 @@ export class NewsurveyComponent implements OnInit {
 
       this.survServ.addFixedQuesSurvey(this.survQues).subscribe(
         response=>{console.log(response)
-
+          alert("Fixed Questions added successfully");
       this.survServ.addDiffQuesSurvey(this.ss).subscribe(a=>{console.log(a)
+        alert("Customized questions Questions added successfully");
       })
     })
   })
